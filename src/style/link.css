@@ -1,0 +1,14 @@
+nav {
+  border: 3px solid beige;
+}
+
+.link {
+  padding: 20px;
+  display: inline-block;
+}
+
+.link.active,
+.link.click {
+  background-color: beige;
+  font-weight: bold;
+}
