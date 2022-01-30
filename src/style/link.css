@@ -9,6 +9,6 @@ nav {
 
 .link.active,
 .link.click {
-  background-color: beige;
+  background-color: tomato;
   font-weight: bold;
 }
