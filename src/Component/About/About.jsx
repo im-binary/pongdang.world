@@ -4,7 +4,7 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function About() {
   return (
     <>
-      <h1>About</h1>
+      <h1 style={{ display: "none" }}>About</h1>
       <nav>
         <ul>
           <li>
