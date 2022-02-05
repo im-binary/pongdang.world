@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
+import Html from "./Html";
 
 export default function About() {
   return (
@@ -18,7 +19,10 @@ export default function About() {
           </li>
         </ul>
       </nav>
-      <Outlet />
+
+      <Routes>
+        <Route path='/html/*' element={<Html />} />
+      </Routes>
     </>
   );
 }

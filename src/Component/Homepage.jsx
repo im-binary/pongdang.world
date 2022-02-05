@@ -26,9 +26,9 @@ export default function Homepage() {
         <Routes>
           <Route exact path='/' element={<Start />} />
           <Route path='/about/*' element={<About />}>
-            <Route exact path='html' element={<Html />} />
-            <Route exact path='js' element={<Js />} />
-            <Route exact path='react' element={<Rreact />} />
+            <Route path='html' element={<Html />} />
+            <Route path='js' element={<Js />} />
+            <Route path='react' element={<Rreact />} />
           </Route>
           <Route path='/contact' element={<Contact />} />
         </Routes>
