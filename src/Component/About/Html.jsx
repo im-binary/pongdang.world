@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { NavLink, Route, Routes } from "react-router-dom";
 import Day1 from "../htmlitems/Day1";
 import Day2 from "../htmlitems/Day2";
