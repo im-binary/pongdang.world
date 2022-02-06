@@ -34,7 +34,6 @@ const WrapperDiv = styled.div`
 
 const Ul = styled.ul`
   width: 200px;
-  /* width: 30%; */
 `;
 
 const Li = styled.li`
