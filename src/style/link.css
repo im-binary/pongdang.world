@@ -11,3 +11,12 @@ nav {
   background-color: tomato;
   font-weight: bold;
 }
+
+.post-link {
+  background-color: white;
+  border: 2px solid #f0f1f2;
+  border-radius: 6px;
+  margin: 10px 0;
+  display: block;
+  padding: 20px 0;
+}
