@@ -1,75 +1,23 @@
-import React, { useState } from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
-import Day1 from "../htmlitems/Day1";
-import Day2 from "../htmlitems/Day2";
+import titleList from "../../constants/html/title-list";
 
 export default function Html() {
-  const [height, setHeight] = useState("100%");
-  const [overflow, setOverflow] = useState("");
-
-  function handlePostClick() {
-    setHeight("200px");
-    setOverflow("scroll");
-  }
-
   return (
     <WrapperDiv>
       <h1 style={{ display: "none" }}>HTML</h1>
       <nav>
-        <ul style={{ height: `${height}`, overflow: `${overflow}` }}>
-          <li>
-            <NavLink
-              onClick={() => handlePostClick()}
-              className={({ isActive }) => "post-link" + (isActive ? " click" : "")}
-              to='day1'
-            >
-              게시글 1
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              onClick={() => handlePostClick()}
-              className={({ isActive }) => "post-link" + (isActive ? " click" : "")}
-              to='day2'
-            >
-              게시글 2
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              onClick={() => handlePostClick()}
-              className={({ isActive }) => "post-link" + (isActive ? " click" : "")}
-              to='day3'
-            >
-              게시글 3
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              onClick={() => handlePostClick()}
-              className={({ isActive }) => "post-link" + (isActive ? " click" : "")}
-              to='day4'
-            >
-              게시글 4
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              onClick={() => handlePostClick()}
-              className={({ isActive }) => "post-link" + (isActive ? " click" : "")}
-              to='day5'
-            >
-              게시글 5
-            </NavLink>
-          </li>
+        <ul>
+          {titleList.map((title, i) => (
+            <li key={`post-${i + 1}`}>
+              <NavLink className={({ isActive }) => "post-link" + (isActive ? " click" : "")} to={`${i + 1}`}>
+                {title}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
-
-      <Routes>
-        <Route path='day1' element={<Day1 />} />
-        <Route path='day2' element={<Day2 />} />
-      </Routes>
     </WrapperDiv>
   );
 }
