@@ -7,6 +7,7 @@ import Html from "./About/Html";
 import "../style/link.css";
 import Js from "./About/Js";
 import Rreact from "./About/Rreact";
+import Post from "./About/Post";
 
 export default function Homepage() {
   return (
@@ -25,8 +26,9 @@ export default function Homepage() {
         </nav>
         <Routes>
           <Route exact path='/' element={<Start />} />
-          <Route path='/about/*' element={<About />}>
+          <Route path='/about' element={<About />}>
             <Route path='html' element={<Html />} />
+            <Route path='html/:id' element={<Post />} />
             <Route path='js' element={<Js />} />
             <Route path='react' element={<Rreact />} />
           </Route>
