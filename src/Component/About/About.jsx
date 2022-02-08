@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
-import Html from "./Html";
+import { NavLink, Outlet } from "react-router-dom";
 import styled from "@emotion/styled";
 
 export default function About() {
@@ -20,10 +19,7 @@ export default function About() {
           </Li>
         </Ul>
       </nav>
-
-      <Routes>
-        <Route path='/html/*' element={<Html />} />
-      </Routes>
+      <Outlet />
     </WrapperDiv>
   );
 }
@@ -33,7 +29,7 @@ const WrapperDiv = styled.div`
 `;
 
 const Ul = styled.ul`
-  width: 200px;
+  width: 150px;
 `;
 
 const Li = styled.li`
