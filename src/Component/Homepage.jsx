@@ -8,6 +8,7 @@ import "../style/link.css";
 import Js from "./About/Js";
 import Rreact from "./About/Rreact";
 import Post from "./About/Post";
+import AboutIndex from "./About/AboutIndex";
 
 export default function Homepage() {
   return (
@@ -27,6 +28,7 @@ export default function Homepage() {
         <Routes>
           <Route exact path='/' element={<Start />} />
           <Route path='/about' element={<About />}>
+            <Route index element={<AboutIndex />} />
             <Route path='html' element={<Html />} />
             <Route path='html/:id' element={<Post />} />
             <Route path='js' element={<Js />} />
