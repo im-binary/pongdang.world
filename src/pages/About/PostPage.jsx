@@ -9,7 +9,7 @@ export default function PostPage() {
   // 1. API(fetch, ajax, axios)를 써서 서버 혹은 cdn에서 불러온다.
   // 2. 상수값으로 불러오자
   useEffect(() => {
-    (() => import("../../constants/html/" + id + ".js"))().then(({ default: contents }) => setContents(contents));
+    (() => import("../../constants/post/html/" + id + ".js"))().then(({ default: contents }) => setContents(contents));
   }, [id]);
 
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
-import titleList from "../../constants/html/title-list";
+import titleList from "../../constants/post/html/title-list";
 
 export default function HtmlPage() {
   return (
