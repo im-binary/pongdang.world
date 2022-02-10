@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import styled from "@emotion/styled";
 
-export default function About() {
+export default function AboutPage() {
   return (
     <WrapperDiv>
       <h1 style={{ display: "none" }}>About</h1>

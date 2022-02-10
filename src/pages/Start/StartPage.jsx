@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Start() {
+export default function StartPage() {
   return <h1>start</h1>;
 }

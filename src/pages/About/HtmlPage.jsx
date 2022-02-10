@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 import titleList from "../../constants/html/title-list";
 
-export default function Html() {
+export default function HtmlPage() {
   return (
     <WrapperDiv>
       <h1 style={{ display: "none" }}>HTML</h1>

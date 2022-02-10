@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
 import { useParams } from "react-router-dom";
 
-export default function Post() {
+export default function PostPage() {
   let [contents, setContents] = useState("");
   let { id } = useParams();
   // 게시물을 불러오는 방법
