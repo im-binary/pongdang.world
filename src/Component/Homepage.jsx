@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import Start from "./Start";
-import Contact from "./Contact";
+import Start from "./Start/Start";
+import Contact from "./Contact/Contact";
 import About from "./About/About";
 import Html from "./About/Html";
 import "../style/link.css";
