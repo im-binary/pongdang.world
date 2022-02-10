@@ -1,6 +1,7 @@
-import React from "react";
+import { css } from "@emotion/react";
 import { NavLink, Outlet } from "react-router-dom";
 import styled from "@emotion/styled";
+import { mainMenuBackgroundClick, mainMenuBackground } from "../../style/theme";
 
 export default function AboutPage() {
   return (
@@ -8,15 +9,21 @@ export default function AboutPage() {
       <h1 style={{ display: "none" }}>About</h1>
       <nav>
         <Ul>
-          <Li>
-            <StyledNavLink to='html'>HTML</StyledNavLink>
-          </Li>
-          <Li>
-            <StyledNavLink to='js'>JS</StyledNavLink>
-          </Li>
-          <Li>
-            <StyledNavLink to='react'>React</StyledNavLink>
-          </Li>
+          <li>
+            <NavLink css={navLinkStyle} to='html'>
+              HTML
+            </NavLink>
+          </li>
+          <li>
+            <NavLink css={navLinkStyle} to='js'>
+              JS
+            </NavLink>
+          </li>
+          <li>
+            <NavLink css={navLinkStyle} to='react'>
+              React
+            </NavLink>
+          </li>
         </Ul>
       </nav>
       <Outlet />
@@ -26,18 +33,22 @@ export default function AboutPage() {
 
 const WrapperDiv = styled.div`
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 const Ul = styled.ul`
-  width: 150px;
-`;
-
-const Li = styled.li`
+  width: 200px;
   border: 1px solid tomato;
 `;
 
-const StyledNavLink = styled(NavLink)`
-  border: 1px solid pink;
+const navLinkStyle = css`
   display: block;
-  padding: 20px 0;
+  padding: 10px 0;
+  margin: 10px 0;
+  ${mainMenuBackground}
+
+  &.active {
+    ${mainMenuBackgroundClick}
+  }
 `;
