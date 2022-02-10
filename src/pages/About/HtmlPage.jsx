@@ -1,17 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { contentContainer } from "../../style/theme";
+import { NavLink } from "react-router-dom";
 import titleList from "../../constants/post/html/title-list";
+import Search from "../../components/Search";
 
 export default function HtmlPage() {
   return (
     <WrapperDiv>
       <h1 style={{ display: "none" }}>HTML</h1>
+      <Search />
       <nav>
         <ul>
           {titleList.map((title, i) => (
             <li key={`post-${i + 1}`}>
-              <NavLink className={({ isActive }) => "post-link" + (isActive ? " click" : "")} to={`${i + 1}`}>
+              <NavLink css={navLinkStyle} to={`${i + 1}`}>
                 {title}
               </NavLink>
             </li>
@@ -25,13 +29,16 @@ export default function HtmlPage() {
 const WrapperDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  ${contentContainer};
 `;
 
-// const Ul = styled.ul`
-//   height: 200px;
-//   overflow: scroll;
-// `;
+const navLinkStyle = css`
+  background-color: white;
+  border: 3px solid #d0d0d0;
+  margin: 20px 0;
+  display: block;
+  padding: 20px 0;
+`;
 
 // const StyledNavLink = styled(NavLink)`
 //   background-color: white;
