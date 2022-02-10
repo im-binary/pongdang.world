@@ -5,7 +5,7 @@ export default function Menu() {
   return (
     <nav>
       <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/'>
-        Home
+        Start
       </NavLink>
       <NavLink className={({ isActive }) => "nav-link" + (isActive ? " click" : "")} to='/about'>
         About
