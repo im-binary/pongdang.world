@@ -14,3 +14,10 @@ export const mainMenuBackground = css`
 export const mainMenuBackgroundClick = css`
   background-color: #8dafff;
 `;
+
+export const contentContainer = css`
+  width: 100%;
+  border: 4px solid #f0f1f2;
+  margin: 10px 0 0 10px;
+  padding: 20px;
+`;
