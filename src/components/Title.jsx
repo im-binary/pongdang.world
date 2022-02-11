@@ -10,7 +10,7 @@ export default function Title() {
         <span
           key={`${letter}-${i}`}
           css={css`
-            padding: 14px;
+            padding-left: 20px;
           `}
         >
           {letter}
@@ -22,8 +22,8 @@ export default function Title() {
 
 const H1 = styled.h1`
   padding: 20px 0;
-  /* letter-spacing: 0.5em; */
   font-size: 50px;
+  text-align: end;
   border: 1px solid olive;
   ${mainTitleColor};
 `;
