@@ -30,9 +30,10 @@ export default function Menu() {
 }
 
 const WrapperDiv = styled.div`
-  border: 1px solid olive;
+  /* border: 1px solid olive; */
   ${boldTitleFont}
   font-size: 24px;
+  margin-bottom: 30px;
 `;
 
 const Ul = styled.ul`

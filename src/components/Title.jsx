@@ -24,7 +24,7 @@ const H1 = styled.h1`
   padding: 20px 0;
   font-size: 50px;
   text-align: end;
-  border: 1px solid olive;
+  /* border: 1px solid olive; */
   ${mainTitleColor}
   ${boldTitleFont}
 `;
