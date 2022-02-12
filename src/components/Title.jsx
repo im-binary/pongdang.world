@@ -18,7 +18,7 @@ export default function Title() {
           </span>
         ))}
       </H1>
-      <h1 css={mobileTitle}>PONGDANG</h1>
+      <h1 css={mobileTitle}>P O N G D A N G</h1>
     </div>
   );
 }
