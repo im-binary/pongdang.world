@@ -9,18 +9,18 @@ export default function Menu() {
       <nav>
         <Ul>
           <li>
-            <NavLink css={cssNavLink} to='/'>
-              Start
+            <NavLink css={cssNavLink} to='/studylog'>
+              공부기록
             </NavLink>
           </li>
           <li>
-            <NavLink css={cssNavLink} to='/about'>
-              About
+            <NavLink css={cssNavLink} to='/'>
+              Hello
             </NavLink>
           </li>
           <li>
             <NavLink css={cssNavLink} to='/contact'>
-              Contact
+              기록의 퐁당
             </NavLink>
           </li>
         </Ul>
@@ -44,6 +44,7 @@ const cssNavLink = css`
   padding: 20px 30px;
   display: inline-block;
   font-weight: bold;
+  line-height: 100%;
   ${mainMenuBackground}
   &.active {
     ${mainMenuBackgroundClick}

@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import styled from "@emotion/styled";
 import { mainMenuBackgroundClick, mainMenuBackground } from "../../style/theme";
 
-export default function AboutPage() {
+export default function StudyLogPage() {
   return (
     <WrapperDiv>
       <h1 style={{ display: "none" }}>About</h1>
