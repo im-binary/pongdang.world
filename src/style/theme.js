@@ -17,9 +17,13 @@ export const mainMenuBackgroundClick = css`
 
 export const contentContainer = css`
   width: 100%;
-  border: 4px solid #f0f1f2;
+  border: 4px solid #8dafff;
   margin: 10px 0 0 10px;
   padding: 20px;
+  @media (max-width: 699px) {
+    margin: 0;
+    border: 3px solid #8dafff;
+  }
 `;
 
 export const boldTitleFont = css`
