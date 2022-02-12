@@ -51,4 +51,9 @@ const cssNavLink = css`
   &.active {
     ${mainMenuBackgroundClick}
   }
+
+  @media (max-width: 500px) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
 `;
