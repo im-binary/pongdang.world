@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
+import { boldTitleFont } from "../style/theme";
 
 export default function Search() {
   return (
@@ -11,7 +12,10 @@ export default function Search() {
 
 const inputStyle = css`
   width: 100%;
-  height: 40px;
+  height: 46px;
   padding: 0 10px;
   border: 3px solid #1908a8;
+  ${boldTitleFont}
+  letter-spacing: 2px;
+  font-size: 20px;
 `;

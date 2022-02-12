@@ -21,3 +21,7 @@ export const contentContainer = css`
   margin: 10px 0 0 10px;
   padding: 20px;
 `;
+
+export const boldTitleFont = css`
+  font-family: "Black Han Sans", sans-serif;
+`;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import React from "react";
-import { mainTitleColor } from "../style/theme";
+import { mainTitleColor, boldTitleFont } from "../style/theme";
 
 export default function Title() {
   return (
@@ -25,5 +25,6 @@ const H1 = styled.h1`
   font-size: 50px;
   text-align: end;
   border: 1px solid olive;
-  ${mainTitleColor};
+  ${mainTitleColor}
+  ${boldTitleFont}
 `;

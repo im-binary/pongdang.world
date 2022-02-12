@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { NavLink, Outlet } from "react-router-dom";
 import styled from "@emotion/styled";
-import { mainMenuBackgroundClick, mainMenuBackground } from "../../style/theme";
+import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../../style/theme";
 
 export default function StudyLogPage() {
   return (
@@ -51,4 +51,5 @@ const navLinkStyle = css`
   &.active {
     ${mainMenuBackgroundClick}
   }
+  ${boldTitleFont}
 `;

@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
-import { mainMenuBackgroundClick, mainMenuBackground } from "../style/theme";
+import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../style/theme";
 
 export default function Menu() {
   return (
@@ -31,6 +31,8 @@ export default function Menu() {
 
 const WrapperDiv = styled.div`
   border: 1px solid olive;
+  ${boldTitleFont}
+  font-size: 24px;
 `;
 
 const Ul = styled.ul`
@@ -43,7 +45,6 @@ const Ul = styled.ul`
 const cssNavLink = css`
   padding: 20px 30px;
   display: inline-block;
-  font-weight: bold;
   line-height: 100%;
   ${mainMenuBackground}
   &.active {
