@@ -1,14 +1,13 @@
 import { css } from "@emotion/react";
 import { NavLink, Outlet } from "react-router-dom";
-import styled from "@emotion/styled";
 import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../../style/theme";
 
 export default function StudyLogPage() {
   return (
-    <WrapperDiv>
-      <h1 style={{ display: "none" }}>About</h1>
-      <nav>
-        <Ul>
+    <div css={wrapperDiv}>
+      <h1 style={{ display: "none" }}>공부기록</h1>
+      <nav css={navContainer}>
+        <ul css={menuContainer}>
           <li>
             <NavLink css={navLinkStyle} to='html'>
               HTML
@@ -24,22 +23,33 @@ export default function StudyLogPage() {
               React
             </NavLink>
           </li>
-        </Ul>
+        </ul>
       </nav>
       <Outlet />
-    </WrapperDiv>
+    </div>
   );
 }
 
-const WrapperDiv = styled.div`
+const navContainer = css`
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 699px) {
+    display: none;
+  }
+`;
+
+const wrapperDiv = css`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 `;
 
-const Ul = styled.ul`
+const menuContainer = css`
   width: 200px;
-  border: 1px solid tomato;
+  /* border: 1px solid tomato; */
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `;
 
 const navLinkStyle = css`
@@ -52,4 +62,7 @@ const navLinkStyle = css`
     ${mainMenuBackgroundClick}
   }
   ${boldTitleFont}
+  @media (max-width: 699px) {
+    display: none;
+  }
 `;
