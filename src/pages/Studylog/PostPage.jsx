@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from "@emotion/styled";
 import { useParams } from "react-router-dom";
 import { css } from "@emotion/react";
 
@@ -15,7 +14,7 @@ export default function PostPage() {
 
   return (
     <div css={WrapperDiv}>
-      <H1>{id}</H1>
+      <h1 css={postTitle}>{id}</h1>
       <div dangerouslySetInnerHTML={{ __html: contents }}></div>
     </div>
   );
@@ -23,6 +22,7 @@ export default function PostPage() {
 
 const WrapperDiv = css`
   display: flex;
+  flex-direction: column;
   width: 100%;
   border: 4px solid #f0f1f2;
   margin: 10px 0 0 10px;
@@ -31,6 +31,6 @@ const WrapperDiv = css`
   width: 100%;
 `;
 
-const H1 = styled.h1`
+const postTitle = css`
   margin: 0 0 30px;
 `;

@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 import React from "react";
 import { mainTitleColor, boldTitleFont } from "../style/theme";
@@ -6,7 +5,7 @@ import { mainTitleColor, boldTitleFont } from "../style/theme";
 export default function Title() {
   return (
     <div>
-      <H1>
+      <h1 css={pcTitle}>
         {"PONGDANG".split("").map((letter, i) => (
           <span
             key={`${letter}-${i}`}
@@ -17,13 +16,13 @@ export default function Title() {
             {letter}
           </span>
         ))}
-      </H1>
+      </h1>
       <h1 css={mobileTitle}>P O N G D A N G</h1>
     </div>
   );
 }
 
-const H1 = styled.h1`
+const pcTitle = css`
   @media (min-width: 500px) {
     padding: 20px 0;
     font-size: 50px;
