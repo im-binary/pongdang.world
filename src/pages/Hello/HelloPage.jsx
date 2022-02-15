@@ -12,11 +12,11 @@ export default function HelloPage() {
 
 const contentContainer = css`
   width: 100%;
-  border: 4px solid #d0d0d0;
+  border: 4px solid #8dafff;
   margin: 10px 0;
   padding: 20px;
   @media (max-width: 501px) {
-    border: 3px solid #d0d0d0;
+    border: 3px solid #8dafff;
   }
 
   h1 {
