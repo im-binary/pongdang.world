@@ -53,66 +53,6 @@ export default function StudyLogPage() {
                 React
               </NavLink>
             </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                XXXX
-              </NavLink>
-            </li>
           </ul>
         </nav>
         <Outlet />
