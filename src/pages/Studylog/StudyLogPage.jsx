@@ -160,19 +160,26 @@ const mobileWrapper = css`
   @media (min-width: 501px) {
     display: none;
   }
-  background-color: gray;
-  border: 3px solid green;
 `;
 
 const mobileMenuContainer = css`
-  background-color: orange;
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: 10px;
+  gap: 12px;
   overflow: scroll;
+  margin-bottom: 10px;
+  border: 3px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 10px 0;
 `;
 
 const mobileMenu = css`
-  background-color: lemonchiffon;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 18px;
+  ${mainMenuBackground} &.active {
+    ${mainMenuBackgroundClick}
+  }
+  ${boldTitleFont}
 `;
