@@ -64,7 +64,7 @@ export default function StudyLogPage() {
 // pc 버전
 
 const pcWrapper = css`
-  @media (max-width: 500px) {
+  @media (max-width: 699px) {
     display: none;
   }
   display: flex;
@@ -97,7 +97,7 @@ const pcMenu = css`
 // mobile 버전
 
 const mobileWrapper = css`
-  @media (min-width: 501px) {
+  @media (min-width: 700px) {
     display: none;
   }
 `;
@@ -111,7 +111,7 @@ const mobileMenuContainer = css`
   margin-bottom: 10px;
   border: 3px solid #d0d0d0;
   border-radius: 10px;
-  padding: 10px 0;
+  padding: 10px 6px;
 `;
 
 const mobileMenu = css`
