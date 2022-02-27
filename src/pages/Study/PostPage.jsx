@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useCategory } from "../../hooks/category";
 import { css } from "@emotion/react";
 import { getPost } from "../../remotes/post";
 
 export default function PostPage() {
   const [contents, setContents] = useState("");
   const { id } = useParams();
-  const { pathname } = useLocation();
+  const category = useCategory();
+
   useEffect(() => {
-    getPost(pathname, id).then((e) => setContents(e.data));
-  }, [pathname, id]);
+    getPost(category, id).then((e) => setContents(e.data));
+  }, [category, id]);
 
   return (
     <>
