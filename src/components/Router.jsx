@@ -22,6 +22,8 @@ export default function Router() {
         <Route path='react' element={<StudyListPage />} />
         {/* 상세 페이지 */}
         <Route path='html/:id' element={<StudyPostPage />} />
+        <Route path='js/:id' element={<StudyPostPage />} />
+        <Route path='react/:id' element={<StudyPostPage />} />
       </Route>
       <Route path='/contact' element={<DailyPage />} />
     </Routes>
