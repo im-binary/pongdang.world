@@ -5,16 +5,12 @@ import { css } from "@emotion/react";
 import { getPost } from "../../remotes/post";
 
 export default function PostPage() {
-  let [contents, setContents] = useState("");
-  let { id } = useParams();
-  // 게시물을 불러오는 방법
-  // 1. API(fetch, ajax, axios)를 써서 서버 혹은 cdn에서 불러온다.
-  // 2. 상수값으로 불러오자
+  const [contents, setContents] = useState("");
+  const { id } = useParams();
   const { pathname } = useLocation();
-  const path = pathname.replace("1", "").replace(/^\//, "").replace(/\/$/, "");
   useEffect(() => {
-    getPost(path, id).then((e) => setContents(e.data));
-  }, [path, id]);
+    getPost(pathname, id).then((e) => setContents(e.data));
+  }, [pathname, id]);
 
   return (
     <>

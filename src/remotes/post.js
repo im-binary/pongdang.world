@@ -1,5 +1,11 @@
 import remote from "./remote";
 
-export async function getPost(path, id) {
-  return remote["pongdang.world"].get(`/static-post/${path}/${id}.md.html`);
+function getCategory(pathname) {
+  const [, depth1, depth2] = pathname.split("/");
+  return [depth1, depth2].join("/");
+}
+
+export async function getPost(pathname, id) {
+  const category = getCategory(pathname);
+  return remote["pongdang.world"].get(`/static-post/${category}/${id}.md.html`);
 }
