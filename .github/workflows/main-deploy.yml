@@ -24,6 +24,12 @@ jobs:
 
       - name: Install Dependencies
         run: yarn
+      
+      - name: install marked
+        run: yarn global add marked
+
+      - name: export markdown to HTML
+        run: find ./static-post -name "*.md" | xargs -I {FILE} marked -i {FILE} -o public/{FILE}.html
 
       - name: Build
         run: yarn build
