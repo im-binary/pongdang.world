@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# 없는 디렉토리 생성
+find ./static-post -name "*.md" | sort | xargs -I {FILE} ./scripts/dir.js {FILE}
+
 # md 파일을 HTML 파일로 변환
 find ./static-post -name "*.md" | sort | xargs -I {FILE} marked -i {FILE} -o ./public/{FILE}.html
 
