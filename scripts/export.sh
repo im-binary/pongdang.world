@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 # md 파일을 HTML 파일로 변환
-find ./static-post -name "*.md" | xargs -I {FILE} marked -i {FILE} -o ./public/{FILE}.html
+find ./static-post -name "*.md" | sort | xargs -I {FILE} marked -i {FILE} -o ./public/{FILE}.html
 
-find ./public/static-post -name "*.html" | grep -v "index.html" | xargs -I {FILE} ./scripts/export.js {FILE}
+# 기존 json 파일 제거
+find ./public/static-post -name "*.json" | sort | xargs -I {FILE} rm -rf {FILE}
+
+# HTML에 리다이렉트 로직 추가 및 list.json 생성
+find ./public/static-post -name "*.html" | sort | grep -v "index.html" | xargs -I {FILE} ./scripts/export.js {FILE}
