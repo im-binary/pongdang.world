@@ -2,11 +2,11 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import HelloPage from "../pages/Hello/HelloPage";
-import StudyLogPage from "../pages/Study/StudyLogPage";
+import StudyLogPage from "../pages/StudyLog/StudyLogPage";
 import DailyPage from "../pages/Daily/DailyPage";
-import ListPage from "../pages/Study/ListPage";
-import PostPage from "../pages/Study/PostPage";
-import StudyLogIndexPage from "../pages/Study/StudyLogIndexPage";
+import ListPage from "../pages/StudyLog/ListPage";
+import PostPage from "../pages/StudyLog/PostPage";
+import StudyLogIndexPage from "../pages/StudyLog/StudyLogIndexPage";
 
 export default function Router() {
   return (
