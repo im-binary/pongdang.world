@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { css } from "@emotion/react";
+import { getPost } from "../../remotes/post";
 
 export default function PostPage() {
   let [contents, setContents] = useState("");
@@ -8,8 +10,10 @@ export default function PostPage() {
   // 게시물을 불러오는 방법
   // 1. API(fetch, ajax, axios)를 써서 서버 혹은 cdn에서 불러온다.
   // 2. 상수값으로 불러오자
+  const { pathname } = useLocation();
+  const path = pathname.replace("1", "").replace(/^\//, "").replace(/\/$/, "");
   useEffect(() => {
-    (() => import("../../constants/post/html/" + id + ".js"))().then(({ default: contents }) => setContents(contents));
+    getPost(path, id).then((e) => setContents(e.data));
   }, [id]);
 
   return (

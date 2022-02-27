@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.0",
     "customize-cra": "^1.0.0",
     "react": "^17.0.2",
     "react-app-rewired": "^2.1.11",
@@ -19,6 +20,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predev": "./scripts/export.sh",
+    "prestart": "./scripts/export.sh",
     "dev": "react-app-rewired start",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",

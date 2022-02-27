@@ -2,17 +2,17 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import HelloPage from "../pages/Hello/HelloPage";
-import StudyLogPage from "../pages/Studylog/StudyLogPage";
+import StudyLogPage from "../pages/StudyLog/StudyLogPage";
 import DailyPage from "../pages/Daily/DailyPage";
-import ListPage from "../pages/Studylog/ListPage";
-import PostPage from "../pages/Studylog/PostPage";
-import StudyLogIndexPage from "../pages/Studylog/StudyLogIndexPage";
+import ListPage from "../pages/StudyLog/ListPage";
+import PostPage from "../pages/StudyLog/PostPage";
+import StudyLogIndexPage from "../pages/StudyLog/StudyLogIndexPage";
 
 export default function Router() {
   return (
     <Routes>
       <Route exact path='/' element={<HelloPage />} />
-      <Route path='/studylog' element={<StudyLogPage />}>
+      <Route path='/study-log' element={<StudyLogPage />}>
         <Route index element={<StudyLogIndexPage />} />
         {/* 리스트 페이지 */}
         <Route path='html' element={<ListPage />} />
