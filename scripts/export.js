@@ -11,6 +11,9 @@ const [, , file] = process.argv;
     [
       `<head>`,
       `  <meta charset="UTF-8" />`,
+      `  <style>`,
+      `  body { display: none; }`,
+      `  </style>`,
       `</head>`,
       `${contents}`,
       `<script>`,
