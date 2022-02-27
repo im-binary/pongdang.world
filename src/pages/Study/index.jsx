@@ -4,6 +4,12 @@ import { NavLink, Outlet } from "react-router-dom";
 import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../../style/theme";
 
 export default function StudyLogPage() {
+  const menuList = [
+    { path: "js", name: "JS" },
+    { path: "html", name: "HTML" },
+    { path: "react", name: "React" },
+  ];
+
   return (
     <>
       {/* pc */}
@@ -12,21 +18,13 @@ export default function StudyLogPage() {
         <h1 style={{ display: "none" }}>공부기록</h1>
         <nav>
           <ul css={pcMenuContainer}>
-            <li>
-              <NavLink css={pcMenu} to='html'>
-                HTML
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={pcMenu} to='js'>
-                JS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={pcMenu} to='react'>
-                React
-              </NavLink>
-            </li>
+            {menuList.map((menu) => (
+              <li key={menu.path}>
+                <NavLink css={pcMenu} to={menu.path}>
+                  {menu.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
         <Outlet />
@@ -38,21 +36,13 @@ export default function StudyLogPage() {
         <h1 style={{ display: "none" }}>공부기록</h1>
         <nav>
           <ul css={mobileMenuContainer}>
-            <li>
-              <NavLink css={mobileMenu} to='html'>
-                HTML
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='js'>
-                JS
-              </NavLink>
-            </li>
-            <li>
-              <NavLink css={mobileMenu} to='react'>
-                React
-              </NavLink>
-            </li>
+            {menuList.map((menu) => (
+              <li key={menu.path}>
+                <NavLink css={mobileMenu} to={menu.path}>
+                  {menu.name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </nav>
         <Outlet />
