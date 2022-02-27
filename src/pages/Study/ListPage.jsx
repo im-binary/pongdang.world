@@ -19,8 +19,8 @@ export default function ListPage() {
         <ul>
           {postList.map((post, i) => (
             <li key={`post-${i + 1}`}>
-              <NavLink css={navLinkStyle} to={`${i + 1}`}>
-                {post}
+              <NavLink css={navLinkStyle} to={`${post.id}`}>
+                {post.title}
               </NavLink>
             </li>
           ))}
