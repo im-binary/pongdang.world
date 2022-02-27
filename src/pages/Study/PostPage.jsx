@@ -14,7 +14,7 @@ export default function PostPage() {
   const path = pathname.replace("1", "").replace(/^\//, "").replace(/\/$/, "");
   useEffect(() => {
     getPost(path, id).then((e) => setContents(e.data));
-  }, [id]);
+  }, [path, id]);
 
   return (
     <>
