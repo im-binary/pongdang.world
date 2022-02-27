@@ -11,7 +11,7 @@ export default function Menu() {
         <nav>
           <ul css={pcMenuContainer}>
             <li>
-              <NavLink css={pcMenu} to='/study-log'>
+              <NavLink css={pcMenu} to='/study'>
                 공부기록
               </NavLink>
             </li>
@@ -35,7 +35,7 @@ export default function Menu() {
         <nav>
           <ul css={mobileMenuContainer}>
             <li>
-              <NavLink css={mobileMenu} to='/study-log'>
+              <NavLink css={mobileMenu} to='/study'>
                 공부기록
               </NavLink>
             </li>

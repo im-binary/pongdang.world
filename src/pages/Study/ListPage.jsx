@@ -4,8 +4,8 @@ import styled from "@emotion/styled";
 import { contentContainer } from "../../style/theme";
 import Search from "../../components/Search";
 import { NavLink } from "react-router-dom";
-import { usePostTitleList } from "./../../hooks/post-title-list";
-import { useTitle } from "./../../hooks/title";
+import { usePostTitleList } from "../../hooks/post-title-list";
+import { useTitle } from "../../hooks/title";
 
 export default function ListPage() {
   const title = useTitle();

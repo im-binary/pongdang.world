@@ -1,25 +1,27 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import HelloPage from "../pages/Hello/HelloPage";
-import StudyLogPage from "../pages/Study/StudyLogPage";
 import DailyPage from "../pages/Daily/DailyPage";
-import ListPage from "../pages/Study/ListPage";
-import PostPage from "../pages/Study/PostPage";
-import StudyLogIndexPage from "../pages/Study/StudyLogIndexPage";
+// Study 페이지
+import StudyPage from "../pages/Study";
+import StudyInfoPage from "../pages/Study/InfoPage";
+import StudyListPage from "../pages/Study/ListPage";
+import StudyPostPage from "../pages/Study/PostPage";
 
 export default function Router() {
   return (
     <Routes>
       <Route exact path='/' element={<HelloPage />} />
-      <Route path='/study-log' element={<StudyLogPage />}>
-        <Route index element={<StudyLogIndexPage />} />
+      <Route path='/study' element={<StudyPage />}>
+        <Route index element={<Navigate replace to='/study/info' />} />
+        <Route path='info' element={<StudyInfoPage />} />
         {/* 리스트 페이지 */}
-        <Route path='html' element={<ListPage />} />
-        <Route path='js' element={<ListPage />} />
-        <Route path='react' element={<ListPage />} />
+        <Route path='html' element={<StudyListPage />} />
+        <Route path='js' element={<StudyListPage />} />
+        <Route path='react' element={<StudyListPage />} />
         {/* 상세 페이지 */}
-        <Route path='html/:id' element={<PostPage />} />
+        <Route path='html/:id' element={<StudyPostPage />} />
       </Route>
       <Route path='/contact' element={<DailyPage />} />
     </Routes>
