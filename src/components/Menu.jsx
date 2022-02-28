@@ -64,6 +64,7 @@ const pcWrapper = css`
   ${boldTitleFont}
   font-size: 24px;
   margin-bottom: 30px;
+  border-bottom: 2px solid #0000cc;
 `;
 
 const pcMenuContainer = css`
