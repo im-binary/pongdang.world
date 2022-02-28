@@ -5,8 +5,8 @@ import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../.
 
 export default function StudyLogPage() {
   const menuList = [
-    { path: "js", name: "JS" },
     { path: "html", name: "HTML" },
+    { path: "js", name: "JS" },
     { path: "react", name: "React" },
   ];
 
@@ -76,6 +76,7 @@ const pcMenu = css`
   display: block;
   padding: 10px 0;
   margin: 10px 0;
+
   ${mainMenuBackground}
 
   &.active {
