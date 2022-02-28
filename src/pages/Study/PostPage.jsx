@@ -27,6 +27,10 @@ const mdStyle = css`
   img {
     width: 100%;
   }
+
+  li {
+    list-style: inside;
+  }
 `;
 
 export default function PostPage() {
