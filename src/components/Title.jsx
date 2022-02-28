@@ -10,7 +10,7 @@ export default function Title() {
           <span
             key={`${letter}-${i}`}
             css={css`
-              padding-left: 20px;
+              padding-right: 20px;
             `}
           >
             {letter}
@@ -26,7 +26,7 @@ const pcTitle = css`
   @media (min-width: 500px) {
     padding: 20px 0;
     font-size: 50px;
-    text-align: end;
+    text-align: start;
     /* border: 1px solid olive; */
     ${mainTitleColor}
     ${boldTitleFont}
