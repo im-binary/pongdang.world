@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { contentContainer } from "../../style/theme";
-import Search from "../../components/Search";
+// import Search from "../../components/Search";
 import { NavLink } from "react-router-dom";
 import { usePostTitleList } from "../../hooks/post-title-list";
 import { useTitle } from "../../hooks/title";
@@ -14,7 +14,7 @@ export default function ListPage() {
   return (
     <WrapperDiv>
       <h1 hidden={true}>{title.toUpperCase()}</h1>
-      <Search />
+      {/* <Search /> */}
       <nav>
         <ul>
           {postList.map((post, i) => (
