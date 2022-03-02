@@ -18,7 +18,7 @@ const mdStyle = css`
 
   pre {
     padding: 20px 30px;
-    background-color: #e9e9e9;
+    background-color: #cdcdcd;
     border-radius: 20px;
     margin: 10px 0;
     overflow: scroll;
@@ -61,7 +61,7 @@ const pcWrapper = css`
     display: none;
   }
   width: 100%;
-  border: 4px solid #8dafff;
+  background-color: #f0f0f0;
   margin: 10px 0 0 10px;
   padding: 10px 30px;
   text-align: start;
@@ -72,7 +72,7 @@ const mobileWrapper = css`
   @media (min-width: 700px) {
     display: none;
   }
-  border: 3px solid #8dafff;
+  background-color: #f0f0f0;
   text-align: start;
   padding: 16px 20px;
 `;
