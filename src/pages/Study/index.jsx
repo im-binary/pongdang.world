@@ -67,7 +67,6 @@ const pcMenuContainer = css`
   display: flex;
   flex-direction: column;
   width: 200px;
-  /* border: 1px solid tomato; */
   @media (max-width: 768px) {
     width: 150px;
   }
@@ -83,6 +82,7 @@ const pcMenu = css`
   &.active {
     ${mainMenuBackgroundClick}
   }
+
   ${boldTitleFont}
 `;
 
