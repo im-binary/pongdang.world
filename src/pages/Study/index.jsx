@@ -5,10 +5,8 @@ import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../.
 
 export default function StudyLogPage() {
   const menuList = [
-    { path: "html", name: "HTML" },
-    { path: "js", name: "JS" },
-    { path: "react", name: "React" },
-    { path: "coding-test", name: "코딩테스트 연습" },
+    { path: "frontend", name: "프론트엔드" },
+    { path: "coding-test", name: "코테수련하기" },
   ];
 
   return (

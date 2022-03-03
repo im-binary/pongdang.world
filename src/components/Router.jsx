@@ -17,14 +17,10 @@ export default function Router() {
         <Route index element={<Navigate replace to='/study/info' />} />
         <Route path='info' element={<StudyInfoPage />} />
         {/* 리스트 페이지 */}
-        <Route path='html' element={<StudyListPage />} />
-        <Route path='js' element={<StudyListPage />} />
-        <Route path='react' element={<StudyListPage />} />
+        <Route path='frontend' element={<StudyListPage />} />
         <Route path='coding-test' element={<StudyListPage />} />
         {/* 상세 페이지 */}
-        <Route path='html/:id' element={<StudyPostPage />} />
-        <Route path='js/:id' element={<StudyPostPage />} />
-        <Route path='react/:id' element={<StudyPostPage />} />
+        <Route path='frontend/:id' element={<StudyPostPage />} />
         <Route path='coding-test/:id' element={<StudyPostPage />} />
       </Route>
       <Route path='/contact' element={<DailyPage />} />
