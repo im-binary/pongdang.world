@@ -15,6 +15,10 @@ export const mainMenuBackgroundClick = css`
   background-color: #8dafff;
 `;
 
+export const mainMenuBackgroundHover = css`
+  color: #8dafff;
+`;
+
 export const contentContainer = css`
   width: 100%;
   background-color: #f0f0f0;
