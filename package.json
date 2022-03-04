@@ -20,13 +20,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predev": "./scripts/export.sh",
-    "prestart": "./scripts/export.sh",
     "dev": "react-app-rewired start",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "watch:md": "npx watch-cli -p './static-post/**/*.md' -c './scripts/export.sh'"
   },
   "eslintConfig": {
     "extends": [
