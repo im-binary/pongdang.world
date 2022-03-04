@@ -4,15 +4,12 @@ import styled from "@emotion/styled";
 import { contentContainer } from "../../style/theme";
 import { NavLink } from "react-router-dom";
 import { usePostTitleList } from "../../hooks/post-title-list";
-import { useTitle } from "../../hooks/title";
 
 export default function ListPage() {
-  const title = useTitle();
   const postList = usePostTitleList();
 
   return (
     <WrapperDiv>
-      <h1 css={listPageTitle}>{title.toUpperCase()}</h1>
       <nav>
         <ul>
           {postList.map((post, i) => (
