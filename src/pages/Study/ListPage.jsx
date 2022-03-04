@@ -2,7 +2,6 @@ import React from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { contentContainer } from "../../style/theme";
-// import Search from "../../components/Search";
 import { NavLink } from "react-router-dom";
 import { usePostTitleList } from "../../hooks/post-title-list";
 import { useTitle } from "../../hooks/title";
@@ -13,8 +12,7 @@ export default function ListPage() {
 
   return (
     <WrapperDiv>
-      <h1 hidden={true}>{title.toUpperCase()}</h1>
-      {/* <Search /> */}
+      <h1 css={listPageTitle}>{title.toUpperCase()}</h1>
       <nav>
         <ul>
           {postList.map((post, i) => (
@@ -34,6 +32,10 @@ const WrapperDiv = styled.div`
   display: flex;
   flex-direction: column;
   ${contentContainer};
+`;
+
+const listPageTitle = css`
+  color: #8dafff;
 `;
 
 const navLinkStyle = css`
