@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { NavLink, Outlet } from "react-router-dom";
 import { mainMenuBackgroundClick, mainMenuBackground, boldTitleFont } from "../../style/theme";
 
-export default function StudyLogPage() {
+export default function StudyPage() {
   const menuList = [
     { path: "frontend", name: "프론트엔드" },
     { path: "coding-test", name: "코테수련하기" },
@@ -14,7 +14,7 @@ export default function StudyLogPage() {
       {/* pc */}
 
       <div css={pcWrapper}>
-        <h1 style={{ display: "none" }}>공부기록</h1>
+        <h1 style={{ display: "none" }}>기록</h1>
         <nav>
           <ul css={pcMenuContainer}>
             {menuList.map((menu) => (
@@ -32,7 +32,7 @@ export default function StudyLogPage() {
       {/* mobile */}
 
       <div css={mobileWrapper}>
-        <h1 style={{ display: "none" }}>공부기록</h1>
+        <h1 style={{ display: "none" }}>기록</h1>
         <nav>
           <ul css={mobileMenuContainer}>
             {menuList.map((menu) => (
