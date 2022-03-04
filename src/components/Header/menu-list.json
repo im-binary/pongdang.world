@@ -1,0 +1,20 @@
+[
+    {
+        "name": "기록",
+        "path": "study",
+        "subMenuList": [
+            {
+                "name": "프론트엔드",
+                "path": "frontend"
+            },
+            {
+                "name": "코테수련하기",
+                "path": "coding-test"
+            }
+        ]
+    },
+    {
+        "name": "작품관",
+        "path": "contact"
+    }
+]

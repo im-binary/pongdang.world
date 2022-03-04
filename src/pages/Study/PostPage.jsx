@@ -61,7 +61,6 @@ const pcWrapper = css`
     display: none;
   }
   width: 100%;
-  background-color: #f0f0f0;
   margin: 10px 0 0 10px;
   padding: 10px 30px;
   text-align: start;
@@ -72,7 +71,6 @@ const mobileWrapper = css`
   @media (min-width: 700px) {
     display: none;
   }
-  background-color: #f0f0f0;
   text-align: start;
   padding: 16px 20px;
 `;

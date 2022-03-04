@@ -21,7 +21,6 @@ export const mainMenuBackgroundHover = css`
 
 export const contentContainer = css`
   width: 100%;
-  background-color: #f0f0f0;
   margin: 10px 0 0 10px;
   padding: 20px;
   @media (max-width: 699px) {
