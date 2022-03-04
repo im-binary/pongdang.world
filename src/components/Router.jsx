@@ -5,7 +5,6 @@ import HelloPage from "../pages/Hello/HelloPage";
 import DailyPage from "../pages/Daily/DailyPage";
 // Study 페이지
 import StudyPage from "../pages/Study";
-import StudyInfoPage from "../pages/Study/InfoPage";
 import StudyListPage from "../pages/Study/ListPage";
 import StudyPostPage from "../pages/Study/PostPage";
 
@@ -14,8 +13,7 @@ export default function Router() {
     <Routes>
       <Route exact path='/' element={<HelloPage />} />
       <Route path='/study' element={<StudyPage />}>
-        <Route index element={<Navigate replace to='/study/info' />} />
-        <Route path='info' element={<StudyInfoPage />} />
+        <Route index element={<Navigate replace to='/study/frontend' />} />
         {/* 리스트 페이지 */}
         <Route path='frontend' element={<StudyListPage />} />
         <Route path='coding-test' element={<StudyListPage />} />
