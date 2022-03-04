@@ -7,13 +7,11 @@ export default function StudyPage() {
     <>
       {/* pc */}
       <div css={pcWrapper}>
-        <h1 style={{ display: "none" }}>기록</h1>
         <Outlet />
       </div>
 
       {/* mobile */}
       <div css={mobileWrapper}>
-        <h1 style={{ display: "none" }}>기록</h1>
         <Outlet />
       </div>
     </>

@@ -61,7 +61,6 @@ const pcWrapper = css`
     display: none;
   }
   width: 100%;
-  margin: 10px 0 0 10px;
   padding: 10px 30px;
   text-align: start;
   width: 100%;

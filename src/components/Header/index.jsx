@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import Logo from "./Logo";
-import menuList from "./menu-list.json";
+import menuList from "../../constants/menu-list.json";
 import DropdownList from "./DropdownList";
 import { useScrollTop } from "../../hooks/scroll";
 
@@ -26,5 +26,5 @@ const container = ({ blur }) => css`
   background-color: ${blur ? `rgb(200 200 200 / 31%);` : "rgb(255 255 255 / 100%);"};
   backdrop-filter: ${blur ? `blur(10px)` : "unset"};
   transition: background-color 300ms;
-  padding: 0 calc((100% - 1200px + 30px) / 2);
+  padding: 0 200px;
 `;
