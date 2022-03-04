@@ -5,6 +5,7 @@ import Router from "./components/Router";
 // import Menu from "./components/Menu";
 // import Title from "./components/Title";
 import Header from "./components/Header";
+import MainContainer from "./components/MainContainer";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         {/* <Title />
         <Menu /> */}
         <Header />
-        <Router />
+        <MainContainer>
+          <Router />
+        </MainContainer>
       </BrowserRouter>
     </div>
   );
