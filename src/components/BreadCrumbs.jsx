@@ -47,14 +47,7 @@ export default function BreadCrumbs() {
   return (
     <>
       {linkList.length > 0 && (
-        <div
-          css={css`
-            ${boldTitleFont}
-            text-align: start;
-            padding: 0 30px;
-            font-size: 20px;
-          `}
-        >
+        <div css={BreadCrumbsStyle}>
           {linkList.map((link, index) => (
             <span key={`breadcrumbs-${link.name}-${link.path}`}>{`${link.name || link.path}${
               index === linkList.length - 1 ? "" : " ▶︎ "
@@ -65,3 +58,16 @@ export default function BreadCrumbs() {
     </>
   );
 }
+
+const BreadCrumbsStyle = css`
+  ${boldTitleFont}
+  text-align: start;
+  margin: 20px 20px 0;
+  padding: 4px 20px;
+  font-size: 16px;
+  border-bottom: 2px solid #c1c1c1;
+  color: #c1c1c1;
+  span:last-child {
+    color: #8dafff;
+  }
+`;
