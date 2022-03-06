@@ -39,7 +39,7 @@ const dropdownStyle = css`
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #dadada;
     width: 100%;
     z-index: 1;
     a {
