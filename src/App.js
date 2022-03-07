@@ -6,18 +6,21 @@ import Router from "./components/Router";
 // import Title from "./components/Title";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   return (
     <div className='App'>
-      <BrowserRouter>
-        {/* <Title />
+      <ErrorBoundary>
+        <BrowserRouter>
+          {/* <Title />
         <Menu /> */}
-        <Header />
-        <MainContainer>
-          <Router />
-        </MainContainer>
-      </BrowserRouter>
+          <Header />
+          <MainContainer>
+            <Router />
+          </MainContainer>
+        </BrowserRouter>
+      </ErrorBoundary>
     </div>
   );
 }
