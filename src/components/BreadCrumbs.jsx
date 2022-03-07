@@ -49,9 +49,9 @@ export default function BreadCrumbs() {
       {linkList.length > 0 && (
         <div css={BreadCrumbsStyle}>
           {linkList.map((link, index) => (
-            <span key={`breadcrumbs-${link.name}-${link.path}`}>{`${link.name || link.path}${
-              index === linkList.length - 1 ? "" : " ▶︎ "
-            }`}</span>
+            <span key={`breadcrumbs-${link.name}-${link.path}`}>
+              {`${link.name || link.path}${index === linkList.length - 1 ? "" : " ▶︎ "}`}
+            </span>
           ))}
         </div>
       )}
