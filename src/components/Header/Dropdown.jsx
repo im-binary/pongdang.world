@@ -1,6 +1,12 @@
 import { css } from "@emotion/react";
 import React from "react";
-import { mainMenuBackgroundClick, mainMenuBackgroundHover, mainMenuBackground } from "../../style/theme";
+import {
+  mainMenuBackgroundClick,
+  mainMenuBackgroundHover,
+  mainMenuBackground,
+  subMenuBgColor,
+  subTextColorHover,
+} from "../../style/theme";
 import { NavLink, useLocation } from "react-router-dom";
 
 // TODO: 이쁘게 리팩토링하기
@@ -39,7 +45,7 @@ const dropdownStyle = css`
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #dadada;
+    ${subMenuBgColor};
     width: 100%;
     z-index: 1;
     a {
@@ -47,9 +53,8 @@ const dropdownStyle = css`
       padding: 10px 0;
       /* border: 1px solid; */
       &:hover {
-        background-color: #c8c8c8;
-      }
-      &:active {
+        /* background-color: #c8c8c8; */
+        ${subTextColorHover}
       }
     }
   }
@@ -74,5 +79,8 @@ const pcMenu = css`
   }
   :hover {
     ${mainMenuBackgroundHover}
+  }
+  @media (max-width: 814px) {
+    display: none;
   }
 `;

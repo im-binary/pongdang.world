@@ -21,10 +21,14 @@ const titleStyle = css`
     ${boldTitleFont}
   }
 
-  @media (max-width: 500px) {
-    display: block;
-    padding: 20px 0;
-    text-align: end;
+  @media (max-width: 569px) {
+    font-size: 35px;
+    ${mainTitleColor}
+    ${boldTitleFont}
+  }
+
+  @media (max-width: 449px) {
+    font-size: 25px;
     ${mainTitleColor}
     ${boldTitleFont}
   }

@@ -22,4 +22,6 @@ const container = css`
     gap: 30px;
     ${boldTitleFont}
   }
+
+  margin-left: auto;
 `;
