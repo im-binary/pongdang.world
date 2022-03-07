@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { contentContainer } from "../../style/theme";
 import { NavLink } from "react-router-dom";
 import { usePostTitleList } from "../../hooks/post-title-list";
+import { subTextColorHover } from "../../style/theme";
 
 export default function ListPage() {
   const postList = usePostTitleList();
@@ -42,6 +43,6 @@ const navLinkStyle = css`
   padding: 20px 0;
   box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
   &:hover {
-    background-color: #e0e0e0;
+    ${subTextColorHover};
   }
 `;
