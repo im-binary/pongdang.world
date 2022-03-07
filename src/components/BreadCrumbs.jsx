@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import menuList from "../constants/menu-list.json";
-import { boldTitleFont } from "../style/theme";
+import { boldTitleFont, mainMenuBackgroundHover, subTextColor } from "../style/theme";
 
 export default function BreadCrumbs() {
   // TODO: linkList는 hook으로 꼭 빼기
@@ -65,9 +65,10 @@ const BreadCrumbsStyle = css`
   margin: 20px 20px 0;
   padding: 4px 20px;
   font-size: 16px;
-  border-bottom: 2px solid #c1c1c1;
-  color: #c1c1c1;
+  border-bottom: 2px solid;
+  border-color: ${subTextColor};
+  ${subTextColor};
   span:last-child {
-    color: #8dafff;
+    ${mainMenuBackgroundHover};
   }
 `;
