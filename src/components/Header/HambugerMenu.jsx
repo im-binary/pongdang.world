@@ -10,31 +10,25 @@ import {
   mainMenuBackgroundHover,
 } from "../../style/theme";
 
-const HambugerBtn = ({ open, handleMenuClick }) => {
-  return (
-    <button css={hambugerBtn(open)}>
-      <img
-        onClick={handleMenuClick}
-        src='https://media.istockphoto.com/photos/red-apple-with-leaf-isolated-on-white-background-picture-id185262648?b=1&k=20&m=185262648&s=170667a&w=0&h=2ouM2rkF5oBplBmZdqs3hSOdBzA4mcGNCoF2P0KUMTM='
-        alt='햄버거 메뉴 버튼'
-      />
-    </button>
-  );
-};
-
 export default function HambugerMenu() {
   const [open, setOpen] = useState(false);
 
   const handleMenuClick = () => {
     setOpen(!open);
   };
+
   return (
     <>
+      <div css={menu} onClick={handleMenuClick}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       {open ? (
-        <div css={Wrapper} onClick={() => setOpen(false)}>
+        <div css={Wrapper} onClick={handleMenuClick}>
           <nav css={navContainer}>
-            <HambugerBtn handleMenuClick={handleMenuClick} open={open} />
             <ul>
+              <p>pongdang</p>
               <p>기록</p>
               <li>
                 <NavLink to='/study/frontend'>프론트엔드</NavLink>
@@ -49,9 +43,8 @@ export default function HambugerMenu() {
             </ul>
           </nav>
         </div>
-      ) : (
-        <HambugerBtn handleMenuClick={handleMenuClick} open={open} />
-      )}
+      ) : // 컴포넌트가 렌더링하는 것을 막기
+      null}
     </>
   );
 }
@@ -69,19 +62,30 @@ const Wrapper = css`
   }
 `;
 
-const hambugerBtn = (open) => css`
-  display: none;
-  @media (max-width: 814px) {
-    display: block;
-    ${open
-      ? css`
-          width: 100%;
-          text-align: end;
-        `
-      : css``}
-    img {
-      width: 50px;
-      vertical-align: middle;
+const menu = css`
+  display: inline-block;
+  transition: all 0.4;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  z-index: 100;
+  span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    :nth-child(1) {
+      top: 0;
+    }
+    :nth-child(2) {
+      top: 12px;
+    }
+    :nth-child(3) {
+      bottom: 0;
     }
   }
 `;
@@ -91,31 +95,36 @@ const navContainer = css`
   @media (max-width: 814px) {
     display: block;
     position: absolute;
-    top: 27px;
+    top: 80px;
     right: 20px;
-    text-align: end;
     ${boldTitleFont};
     ${subMenuBgColor};
     border-radius: 20px;
+    overflow: hidden;
 
     ul {
-      margin: 0 0 20px;
       text-align: center;
       width: 200px;
     }
 
     p {
-      padding: 4px 10px;
+      padding: 6px 16px;
       text-align: start;
       border-bottom: 1px solid black;
       ${mainTitleColor};
+      :first-child {
+        text-align: center;
+      }
     }
 
     li {
       width: 100%;
       border-bottom: 1px solid;
+      :last-child {
+        border-bottom: none;
+      }
 
-      &:hover {
+      :hover {
         ${subTextColorHover};
       }
       .active {
