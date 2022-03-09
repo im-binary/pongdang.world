@@ -63,29 +63,32 @@ const Wrapper = css`
 `;
 
 const menu = css`
-  display: inline-block;
-  transition: all 0.4;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 28px;
-  height: 28px;
-  z-index: 100;
-  span {
-    position: absolute;
+  display: none;
+  @media (max-width: 814px) {
+    display: inline-block;
+    transition: all 0.4;
+    position: relative;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #000;
-    border-radius: 4px;
-    :nth-child(1) {
-      top: 0;
-    }
-    :nth-child(2) {
-      top: 12px;
-    }
-    :nth-child(3) {
-      bottom: 0;
+    width: 28px;
+    height: 28px;
+    z-index: 100;
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #000;
+      border-radius: 4px;
+      :nth-child(1) {
+        top: 0;
+      }
+      :nth-child(2) {
+        top: 12px;
+      }
+      :nth-child(3) {
+        bottom: 0;
+      }
     }
   }
 `;
