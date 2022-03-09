@@ -80,13 +80,13 @@ const menu = css`
       height: 4px;
       background-color: #000;
       border-radius: 4px;
-      :nth-child(1) {
+      :nth-of-type(1) {
         top: 0;
       }
-      :nth-child(2) {
+      :nth-of-type(2) {
         top: 12px;
       }
-      :nth-child(3) {
+      :nth-of-type(3) {
         bottom: 0;
       }
     }
