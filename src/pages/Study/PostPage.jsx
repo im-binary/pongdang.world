@@ -64,6 +64,9 @@ const pcWrapper = css`
   padding: 10px 30px;
   text-align: start;
   width: 100%;
+  h1 {
+    text-align: center;
+  }
 `;
 
 const mobileWrapper = css`
