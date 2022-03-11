@@ -115,7 +115,7 @@ const navContainer = css`
       text-align: start;
       border-bottom: 1px solid black;
       ${mainTitleColor};
-      :first-child {
+      :first-of-type {
         text-align: center;
       }
     }
