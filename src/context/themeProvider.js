@@ -26,7 +26,7 @@ function useTheme() {
       window.localStorage.setItem("theme", "dark");
     } else {
       setThemeMode("light");
-      window.localStorage.setItem("theme", "ligth");
+      window.localStorage.setItem("theme", "light");
     }
   }, [setThemeMode, themeMode]);
 
