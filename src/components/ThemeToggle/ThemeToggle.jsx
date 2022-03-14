@@ -17,6 +17,8 @@ const ToggleWrapper = styled.div`
   right: 28px;
   z-index: 1;
   font-size: 50px;
+
+  // 드래그 안 되게 !
   -ms-user-select: none;
   -moz-user-select: -moz-none;
   -webkit-user-select: none;

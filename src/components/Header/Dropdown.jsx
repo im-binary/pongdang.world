@@ -44,6 +44,7 @@ const dropdownStyle = css`
     a {
       display: block;
       padding: 10px 0;
+      color: black;
 
       &:hover {
         ${subTextColorHover}
