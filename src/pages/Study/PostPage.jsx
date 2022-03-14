@@ -19,6 +19,7 @@ const mdStyle = css`
   pre {
     padding: 20px 30px;
     background-color: #cdcdcd;
+    color: black;
     border-radius: 20px;
     margin: 10px 0;
     overflow: scroll;
@@ -66,7 +67,6 @@ const pcWrapper = css`
   width: 100%;
   h1 {
     text-align: center;
-    font-size: 32px;
   }
 `;
 
