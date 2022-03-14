@@ -32,4 +32,12 @@ const container = ({ blur }) => css`
   backdrop-filter: ${blur ? `blur(10px)` : "unset"};
   transition: background-color 300ms;
   padding: 0 20px;
+
+  @media (max-width: 569px) {
+    height: 90px;
+  }
+
+  @media (max-width: 449px) {
+    height: 72px;
+  }
 `;
