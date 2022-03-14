@@ -13,8 +13,8 @@ export default ThemeToggle;
 
 const ToggleWrapper = styled.div`
   position: fixed;
-  bottom: 4%;
-  right: 3%;
+  bottom: 28px;
+  right: 28px;
   z-index: 1;
   font-size: 50px;
   -ms-user-select: none;
