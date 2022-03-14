@@ -1,7 +1,5 @@
 import { css } from "@emotion/react";
 
-// TODO: 다크테마 구현해서 블로그에 기록 남기기
-
 export const mainTitleColor = css`
   // blue
   color: #0000cc;
@@ -43,3 +41,25 @@ export const subTextColorHover = css`
 export const subMenuBgColor = css`
   background-color: #c8c8c8d9;
 `;
+
+// TODO: 다크테마 구현해서 블로그에 기록 남기기
+
+export const lightTheme = {
+  bgColor: "#fefefe",
+  mainTextColor: "#000",
+  boxBgcolor: "#fefefe",
+  btnBorder: "1px solid #eaeaea",
+};
+
+export const darkTheme = {
+  bgColor: "#323232",
+  mainTextColor: "#ececec",
+  boxBgColor: "#434343",
+  boxHoverColor: "#565656",
+  btnBorder: "1px solid #2c2d33",
+};
+
+export const theme = {
+  lightTheme,
+  darkTheme,
+};

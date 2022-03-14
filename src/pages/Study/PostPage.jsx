@@ -66,6 +66,7 @@ const pcWrapper = css`
   width: 100%;
   h1 {
     text-align: center;
+    font-size: 32px;
   }
 `;
 

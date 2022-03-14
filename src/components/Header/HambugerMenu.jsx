@@ -139,6 +139,7 @@ const navContainer = css`
     li > a {
       padding: 20px;
       display: block;
+      color: black;
     }
   }
 `;

@@ -12,7 +12,7 @@ export default function ListPage() {
   return (
     <WrapperDiv>
       <nav>
-        <ul>
+        <ul className='content-list'>
           {postList.map((post, i) => (
             <li key={`post-${i + 1}`}>
               <NavLink css={navLinkStyle} to={`${post.id}`}>
@@ -33,7 +33,7 @@ const WrapperDiv = styled.div`
 `;
 
 const navLinkStyle = css`
-  background-color: white;
+  /* background-color: white; */
   /* border: 3px solid #d0d0d0; */
   border-radius: 16px;
   font-size: 20px;

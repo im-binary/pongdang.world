@@ -7,18 +7,25 @@ import Router from "./components/Router";
 import Header from "./components/Header";
 import MainContainer from "./components/MainContainer";
 import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./context/themeProvider";
+import { GlobalStyle } from "./style/GlobalStyle";
+import ThemeToggleContainer from "./components/ThemeToggle/ThemeToggleContainer";
 
 function App() {
   return (
     <div className='App'>
       <ErrorBoundary>
         <BrowserRouter>
-          {/* <Title />
+          <ThemeProvider>
+            <GlobalStyle />
+            {/* <Title />
         <Menu /> */}
-          <Header />
-          <MainContainer>
-            <Router />
-          </MainContainer>
+            <Header />
+            <ThemeToggleContainer />
+            <MainContainer>
+              <Router />
+            </MainContainer>
+          </ThemeProvider>
         </BrowserRouter>
       </ErrorBoundary>
     </div>
