@@ -73,6 +73,13 @@ export default function HelloPage() {
             </li>
           </ul>
         </section>
+
+        <section>
+          <h3>Contacts</h3>
+          <ul>
+            <li>👉 pongpong0121@kakao.com</li>
+          </ul>
+        </section>
       </div>
     </div>
   );
