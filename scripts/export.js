@@ -25,21 +25,12 @@ const [, , file] = process.argv;
   }
 
   const list = JSON.parse((await fs.promises.readFile(path.resolve(file, "..", "list.json"))).toString("utf-8"));
-  await fs.promises.writeFile(
-    path.resolve(file, "..", "list.json"),
-    JSON.stringify(
-      [
-        ...list,
-        {
-          title: contents
-            .trim()
-            .split("\n")[0]
-            .replace(/<[^>]*>/g, ""),
-          id: list.length + 1,
-        },
-      ],
-      null,
-      2
-    )
-  );
+  const title = contents
+    .trim()
+    .split("\n")[0]
+    .replace(/<[^>]*>/g, "");
+  const item = { title, id: list.length + 1 };
+
+  await fs.promises.writeFile(path.resolve(file, "..", "list.json"), JSON.stringify([...list, item], null, 2));
+  console.log([`${title}이 추가되었습니다.`, `${JSON.stringify(item, null, 2)}`].join("\n"));
 })();
