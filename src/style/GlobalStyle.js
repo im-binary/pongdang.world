@@ -6,15 +6,19 @@ export const GlobalStyle = createGlobalStyle`
         background-color:${({ theme }) => theme.bgColor};
         color:${({ theme }) => theme.mainTextColor}
     }
+    
     .content-list li a{
         background-color:${({ theme }) => theme.boxBgColor};
     }
+
     .content-list li a:hover {
         background-color:${({ theme }) => theme.boxHoverColor};
     }
-    .work-list li a {
-        color:${({ theme }) => theme.mainTextColor}
+
+    .work-list li{
+        background-color:${({ theme }) => theme.boxBgColor};
     }
+ 
     .work-list li:hover {
         background-color:${({ theme }) => theme.boxHoverColor};
     }
