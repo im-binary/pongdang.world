@@ -7,6 +7,11 @@ export default function HelloPage() {
       css={css`
         ${contentContainer}
         border: 4px solid #8dafff;
+        text-align: start;
+        word-break: keep-all;
+        @media (max-width: 501px) {
+          border: 3px solid #8dafff;
+        }
       `}
     >
       <h1>안녕하세요 👋 퐁당의 블로그 입니당 👻</h1>
@@ -15,8 +20,6 @@ export default function HelloPage() {
         css={css`
           ${contentContainer}
           margin: 20px auto;
-          text-align: left;
-          width: 500px;
           ul {
             list-style-type: georgian;
             padding-left: 12px;
@@ -28,7 +31,7 @@ export default function HelloPage() {
             margin-bottom: 12px;
           }
           section {
-            margin-bottom: 12px;
+            margin: 12px 0;
           }
           a {
             text-decoration: underline;
@@ -89,13 +92,13 @@ const contentContainer = css`
   width: 100%;
   margin: 10px 0;
   padding: 20px;
-  @media (max-width: 501px) {
-    border: 3px solid #8dafff;
-  }
 
   h1 {
-    @media (max-width: 501px) {
-      font-size: 22px;
+    border-bottom: 4px solid;
+    display: inline;
+
+    @media (max-width: 536px) {
+      font-size: 20px;
     }
   }
 `;
