@@ -21,7 +21,7 @@ export default function Menu() {
               </NavLink>
             </li>
             <li>
-              <NavLink css={pcMenu} to='/contact'>
+              <NavLink css={pcMenu} to='/work'>
                 기록의 퐁당
               </NavLink>
             </li>
@@ -45,7 +45,7 @@ export default function Menu() {
               </NavLink>
             </li>
             <li>
-              <NavLink css={mobileMenu} to='/contact'>
+              <NavLink css={mobileMenu} to='/work'>
                 기록의 퐁당
               </NavLink>
             </li>

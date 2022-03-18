@@ -38,7 +38,7 @@ export default function HambugerMenu() {
               </li>
               <p>작품관</p>
               <li>
-                <NavLink to='/contact'>작품관</NavLink>
+                <NavLink to='/work'>작품관</NavLink>
               </li>
             </ul>
           </nav>

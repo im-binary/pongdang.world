@@ -12,4 +12,10 @@ export const GlobalStyle = createGlobalStyle`
     .content-list li a:hover {
         background-color:${({ theme }) => theme.boxHoverColor};
     }
+    .work-list li a {
+        color:${({ theme }) => theme.mainTextColor}
+    }
+    .work-list li:hover {
+        background-color:${({ theme }) => theme.boxHoverColor};
+    }
 `;

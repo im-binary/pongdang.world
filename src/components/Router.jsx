@@ -2,11 +2,14 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import HelloPage from "../pages/Hello/HelloPage";
-import DailyPage from "../pages/Daily/DailyPage";
+
 // Study 페이지
 import StudyPage from "../pages/Study";
 import StudyListPage from "../pages/Study/ListPage";
 import StudyPostPage from "../pages/Study/PostPage";
+
+// Work 페이지
+import WorkPage from "../pages/Work/index";
 
 export default function Router() {
   return (
@@ -21,7 +24,7 @@ export default function Router() {
         <Route path='frontend/:id' element={<StudyPostPage />} />
         <Route path='coding-test/:id' element={<StudyPostPage />} />
       </Route>
-      <Route path='/contact' element={<DailyPage />} />
+      <Route path='/work' element={<WorkPage />} />
     </Routes>
   );
 }
