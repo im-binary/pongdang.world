@@ -3,43 +3,28 @@ import { css } from "@emotion/react";
 import { subTextColorHover } from "../../style/theme";
 
 export default function WorkPage() {
+  const workList = [
+    { name: "우리집 고양이", url: "https://blog.pongdang.today/pongwork/07/20" },
+    { name: "토끼", url: "https://blog.pongdang.today/pongwork/07/22" },
+    { name: "토끼를 넣은 Profile", url: "https://blog.pongdang.today/pongwork/07/24" },
+    { name: "inline-block 사용해보기", url: "https://blog.pongdang.today/pongwork/07/29" },
+    { name: "float 사용해보기", url: "https://blog.pongdang.today/pongwork/07/31" },
+    { name: "flex 사용해보기", url: "https://blog.pongdang.today/pongwork/08/05" },
+    { name: "position 사용해보기", url: "https://blog.pongdang.today/pongwork/08/08" },
+    { name: "자바스크립트 Math.random() 사용해보기", url: "https://blog.pongdang.today/pongwork/08/12" },
+    { name: "자바스크립트 방향키 이벤트", url: "https://blog.pongdang.today/pongwork/08/15" },
+    { name: "자바스크립트 방향키와 버튼 이벤트", url: "https://blog.pongdang.today/cc/html/cc07" },
+    { name: "자바스크립트의 Math, String, Date 객체 활용", url: "https://blog.pongdang.today/pongwork/21/12/25" },
+  ];
   return (
     <div css={wrapper}>
       <nav css={navLinkStyle}>
         <ul className='work-list'>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/07/20'>우리집 고양이</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/07/22'>토끼</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/07/24'>토끼를 넣은 Profile</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/07/29'>inline-block 사용해보기</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/07/31'>float 사용해보기</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/08/05'>flex 사용해보기</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/08/08'>position 사용해보기</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/08/12'>자바스크립트 Math.random() 사용해보기</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/08/15'>자바스크립트 방향키 이벤트</a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/cc/html/cc07'>자바스크립트 방향키와 버튼 이벤트 </a>
-          </li>
-          <li>
-            <a href='https://blog.pongdang.today/pongwork/21/12/25'>자바스크립트의 Math, String, Date 객체 활용</a>
-          </li>
+          {workList.map((work, i) => (
+            <li key={`work-${i + 1}`}>
+              <a href={`${work.url}`}>{`${work.name}`}</a>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
