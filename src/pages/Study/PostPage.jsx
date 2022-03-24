@@ -5,6 +5,13 @@ import { css } from "@emotion/react";
 import { getPost } from "../../remotes/post";
 
 const mdStyle = css`
+  h1 {
+    background-color: #a0a0a05f;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    padding: 10px 0;
+  }
+
   h1,
   h2,
   h3 {
@@ -74,6 +81,5 @@ const mobileWrapper = css`
   @media (min-width: 700px) {
     display: none;
   }
-  text-align: start;
   padding: 16px 20px;
 `;
