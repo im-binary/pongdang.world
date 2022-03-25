@@ -68,7 +68,7 @@ const menu = css`
     display: inline-block;
     transition: all 0.4;
     position: relative;
-    top: 0;
+    top: -4px;
     left: 0;
     width: 28px;
     height: 28px;
