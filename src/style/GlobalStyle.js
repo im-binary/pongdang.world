@@ -22,4 +22,8 @@ export const GlobalStyle = createGlobalStyle`
     .work-list li:hover {
         background-color:${({ theme }) => theme.boxHoverColor};
     }
+    
+    .blog-link {
+        color:${({ theme }) => theme.mainTextColor}
+    }
 `;
