@@ -27,7 +27,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "watch:md": "npx watch-cli -p './static-post/**/*.md' -c './scripts/export.sh'"
+    "watch:md": "./scripts/export.sh && npx watch-cli -p './static-post/**/*.md' -c './scripts/export.sh'"
   },
   "eslintConfig": {
     "extends": [
