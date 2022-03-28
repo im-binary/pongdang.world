@@ -29,7 +29,7 @@ const [, , file] = process.argv;
     .trim()
     .split("\n")[0]
     .replace(/<[^>]*>/g, "");
-  const id = list.length + 1 < 10 ? `0${list.length + 1}` : `list.length + 1`;
+  const id = list.length + 1 < 10 ? `0${list.length + 1}` : `${list.length + 1}`;
 
   await fs.promises.writeFile(path.resolve(file, "..", "list.json"), JSON.stringify([...list, { title, id }], null, 2));
   console.log([`${title}이 추가되었습니다.`, `${JSON.stringify({ title, id }, null, 2)}`].join("\n"));
