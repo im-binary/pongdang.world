@@ -99,7 +99,6 @@ const pcWrapper = css`
   width: 100%;
   padding: 10px 30px;
   text-align: start;
-  width: 100%;
   h1 {
     text-align: center;
   }
@@ -109,5 +108,10 @@ const mobileWrapper = css`
   @media (min-width: 700px) {
     display: none;
   }
+  width: 100%;
+  text-align: start;
   padding: 16px 20px;
+  h1 {
+    text-align: center;
+  }
 `;
