@@ -24,9 +24,6 @@ const pcWrapper = css`
   @media (max-width: 699px) {
     display: none;
   }
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
 `;
 
 const mobileWrapper = css`
