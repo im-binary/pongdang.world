@@ -18,18 +18,25 @@ function App() {
   function reducer(currentState, action) {
     if (currentState === undefined) {
       return {
-        mode: localStorage.getItem("mode") || "A",
+        listType: localStorage.getItem("listType") || "A",
       };
     }
 
     const newState = { ...currentState };
 
-    if (action.type === "CHANGE_A") {
-      newState.mode = "A";
+    switch (action.type) {
+      default:
+      case "CHANGE_A": {
+        newState.listType = "A";
+        break;
+      }
+      case "CHANGE_B": {
+        newState.listType = "B";
+        break;
+      }
     }
-    if (action.type === "CHANGE_B") {
-      newState.mode = "B";
-    }
+
+    localStorage.setItem("listType", newState.listType);
 
     return newState;
   }
