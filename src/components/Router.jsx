@@ -11,6 +11,9 @@ import StudyPostPage from "../pages/Study/PostPage";
 // Work 페이지
 import WorkPage from "../pages/Work/index";
 
+// Test 페이지
+import TestPage from "../pages/Test/index";
+
 export default function Router() {
   return (
     <Routes>
@@ -25,6 +28,7 @@ export default function Router() {
         <Route path='coding-test/:id' element={<StudyPostPage />} />
       </Route>
       <Route path='/work' element={<WorkPage />} />
+      <Route path='/test' element={<TestPage />} />
     </Routes>
   );
 }
