@@ -14,13 +14,23 @@ const mdStyle = css`
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     margin: 20px 0;
   }
 
   p {
     line-height: 1.8;
     margin: 10px 0;
+  }
+
+  code {
+    display: inline-block;
+    padding: 0px 12px;
+    margin: 2px 0;
+    background-color: #cdcdcd;
+    color: black;
+    border-radius: 20px;
   }
 
   pre {
@@ -32,12 +42,30 @@ const mdStyle = css`
     overflow: scroll;
   }
 
+  pre code {
+    padding: unset;
+    margin: unset;
+  }
+
   img {
     width: 100%;
   }
 
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
   li {
-    list-style: inside;
+    margin-left: 20px;
+  }
+
+  a {
+    color: red;
+    font-weight: bold;
   }
 `;
 
