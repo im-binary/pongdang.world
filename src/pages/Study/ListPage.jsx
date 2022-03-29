@@ -52,9 +52,12 @@ const buttonContainer = css`
   button {
     padding: 10px 20px;
     font-weight: bold;
+    font-size: 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
+
     &:hover {
       background-color: #c8d9ff;
     }

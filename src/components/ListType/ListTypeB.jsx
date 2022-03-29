@@ -29,7 +29,7 @@ const wraaper = css`
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
     @media (max-width: 799px) {
       grid-template-columns: 1fr 1fr;
     }
