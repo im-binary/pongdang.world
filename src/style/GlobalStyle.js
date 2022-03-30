@@ -7,6 +7,15 @@ export const GlobalStyle = createGlobalStyle`
         color:${({ theme }) => theme.mainTextColor}
     }
     
+    .list-type-button button {
+        background-color:${({ theme }) => theme.boxBgColor};
+        color:${({ theme }) => theme.mainTextColor}
+    }
+
+    .list-type-button button:hover {
+        background-color:${({ theme }) => theme.boxHoverColor};
+    }
+
     .content-list li a{
         background-color:${({ theme }) => theme.boxBgColor};
     }

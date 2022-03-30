@@ -47,7 +47,8 @@ export const subMenuBgColor = css`
 export const lightTheme = {
   bgColor: "#fefefe",
   mainTextColor: "#000",
-  boxBgcolor: "#fefefe",
+  boxBgColor: "#efefef",
+  boxHoverColor: "#e0e0e0",
   btnBorder: "1px solid #eaeaea",
 };
 
