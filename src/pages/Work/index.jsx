@@ -1,8 +1,12 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { subTextColorHover } from "../../style/theme";
+import { useSelector } from "react-redux";
+import { contentContainer } from "../../style/theme";
+import ListTypeButton from "../../components/Button/ListTypeButton";
 
-export default function WorkPage() {
+export default function WorkPage(state) {
+  const isLongList = useSelector(({ listType }) => listType === "A");
+
   const workList = [
     { name: "우리집 고양이", url: "https://blog.pongdang.today/pongwork/07/20" },
     { name: "토끼", url: "https://blog.pongdang.today/pongwork/07/22" },
@@ -17,45 +21,77 @@ export default function WorkPage() {
     { name: "자바스크립트의 Math, String, Date 객체 활용", url: "https://blog.pongdang.today/pongwork/21/12/25" },
   ];
   return (
-    <div css={wrapper}>
-      <nav css={navLinkStyle}>
-        <ul className='work-list'>
-          {workList.map((work, i) => (
-            <li key={`work-${i + 1}`}>
-              <a href={`${work.url}`}>{`${work.name}`}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <>
+      <ListTypeButton />
+      {isLongList ? (
+        <nav css={wrapperA}>
+          <ul className='work-list'>
+            {workList.map((work, i) => (
+              <li key={`work-${i + 1}`}>
+                <a href={`${work.url}`}>{`${work.name}`}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ) : (
+        <nav css={wrapperB}>
+          <ul className='work-list'>
+            {workList.map((work, i) => (
+              <li key={`work-${i + 1}`}>
+                <a href={`${work.url}`}>{`${work.name}`}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
+    </>
   );
 }
 
-const wrapper = css`
+const wrapperA = css`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 0px 20px 20px;
-`;
-
-const navLinkStyle = css`
+  ${contentContainer};
   li {
-    /* background-color: white; */
-    /* border: 3px solid #d0d0d0; */
     border-radius: 16px;
     font-size: 20px;
     font-weight: bold;
     margin: 20px 0;
     display: block;
-    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
-    &:hover {
-      ${subTextColorHover};
+    padding: 20px 0;
+  }
+`;
+
+const wrapperB = css`
+  margin-top: 20px;
+  ${contentContainer};
+  word-break: keep-all;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    @media (max-width: 799px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 499px) {
+      grid-template-columns: 1fr;
     }
   }
 
+  li {
+    height: 150px;
+    border-radius: 16px;
+  }
+
   a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
     width: 100%;
-    padding: 20px 0;
+    height: 100%;
   }
 `;
