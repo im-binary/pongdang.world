@@ -1,7 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
 import { contentContainer } from "../../style/theme";
-import { subTextColorHover } from "../../style/theme";
 import { usePostTitleList } from "../../hooks/post-title-list";
 import { NavLink } from "react-router-dom";
 
@@ -9,7 +8,7 @@ export default function ListTypeB() {
   const postList = usePostTitleList();
 
   return (
-    <nav css={wraaper}>
+    <nav css={wrapper}>
       <ul className='content-list'>
         {postList.map((post, i) => (
           <li key={`post-${i + 1}`}>
@@ -21,7 +20,7 @@ export default function ListTypeB() {
   );
 }
 
-const wraaper = css`
+const wrapper = css`
   margin-top: 20px;
   ${contentContainer};
   word-break: keep-all;
@@ -52,9 +51,5 @@ const wraaper = css`
     width: 100%;
     height: 100%;
     border-radius: 16px;
-    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
-    &:hover {
-      ${subTextColorHover};
-    }
   }
 `;

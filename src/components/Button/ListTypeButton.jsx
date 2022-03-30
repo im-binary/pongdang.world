@@ -7,7 +7,7 @@ export default function ListTypeButton() {
   const dispatch = useDispatch();
 
   return (
-    <div css={buttonContainer}>
+    <div className='list-type-button' css={buttonContainer}>
       <button
         onClick={() => dispatch({ type: "CHANGE_A" })}
         style={{
@@ -30,23 +30,17 @@ export default function ListTypeButton() {
 
 const buttonContainer = css`
   margin-top: 20px;
+  text-align: end;
   button {
+    margin-right: 20px;
     padding: 10px 20px;
     font-weight: bold;
     font-size: 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px, rgb(0 0 0 / 19%) 0px 6px 20px 0px;
-
-    &:hover {
-      background-color: #c8d9ff;
-    }
     &:active {
       transform: scale(0.95);
     }
-  }
-  button + button {
-    margin-left: 20px;
   }
 `;
