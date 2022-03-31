@@ -79,6 +79,7 @@ const menu = css`
     width: 28px;
     height: 28px;
     z-index: 100;
+    cursor: pointer;
 
     span {
       transition: transform 0.5s;
