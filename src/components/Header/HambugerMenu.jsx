@@ -19,16 +19,15 @@ export default function HambugerMenu() {
 
   return (
     <>
-      <div css={menu} onClick={handleMenuClick}>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div css={menu} className='buger-menu-container' onClick={handleMenuClick}>
+        <span className={open ? "menu-active" : ""}></span>
+        <span className={open ? "menu-active" : ""}></span>
+        <span className={open ? "menu-active" : ""}></span>
       </div>
       {open ? (
         <div css={Wrapper} onClick={handleMenuClick}>
           <nav css={navContainer}>
             <ul>
-              <p>pongdang</p>
               <p>기록</p>
               <li>
                 <NavLink to='/study/frontend'>프론트엔드</NavLink>
@@ -64,21 +63,29 @@ const Wrapper = css`
 
 const menu = css`
   display: none;
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
   @media (max-width: 814px) {
     display: inline-block;
-    transition: all 0.4;
     position: relative;
     top: -4px;
     left: 0;
     width: 28px;
     height: 28px;
     z-index: 100;
+
     span {
+      transition: transform 0.5s;
       position: absolute;
       left: 0;
       width: 100%;
       height: 4px;
-      background-color: #000;
       border-radius: 4px;
       :nth-of-type(1) {
         top: 0;
@@ -90,6 +97,22 @@ const menu = css`
         bottom: 0;
       }
     }
+
+    .menu-active {
+      transition: transform 0.5s;
+      :nth-of-type(1) {
+        -webkit-transform: translateY (12px) rotate (-45deg);
+        transform: translateY(12px) rotate(-45deg);
+      }
+      :nth-of-type(2) {
+        animation: fadeout 0.4s;
+        opacity: 0;
+      }
+      :nth-of-type(3) {
+        -webkit-transform: translateY(-12px) rotate(45deg);
+        transform: translateY(-12px) rotate(45deg);
+      }
+    }
   }
 `;
 
@@ -98,12 +121,20 @@ const navContainer = css`
   @media (max-width: 814px) {
     display: block;
     position: absolute;
-    top: 80px;
-    right: 20px;
+    top: 28px;
+    right: 12px;
     ${boldTitleFont};
     ${subMenuBgColor};
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
+
+    @media (max-width: 569px) {
+      top: 20px;
+    }
+
+    @media (max-width: 449px) {
+      top: 10px;
+    }
 
     ul {
       text-align: center;
@@ -113,19 +144,16 @@ const navContainer = css`
     p {
       padding: 6px 16px;
       text-align: start;
-      border-bottom: 1px solid black;
+      border-top: 1px solid black;
       ${mainTitleColor};
       :first-of-type {
-        text-align: center;
+        margin-top: 44px;
       }
     }
 
     li {
       width: 100%;
-      border-bottom: 1px solid;
-      :last-child {
-        border-bottom: none;
-      }
+      border-top: 1px solid black;
 
       :hover {
         ${subTextColorHover};
