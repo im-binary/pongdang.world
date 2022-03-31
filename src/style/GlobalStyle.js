@@ -35,4 +35,8 @@ export const GlobalStyle = createGlobalStyle`
     .blog-link {
         color:${({ theme }) => theme.mainTextColor}
     }
+
+    .buger-menu-container span {
+        background-color:${({ theme }) => theme.mainTextColor}
+    }
 `;
