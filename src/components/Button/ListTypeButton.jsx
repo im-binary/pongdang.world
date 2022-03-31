@@ -12,17 +12,19 @@ export default function ListTypeButton() {
         onClick={() => dispatch({ type: "CHANGE_A" })}
         style={{
           backgroundColor: isLongList ? "#8dafff" : "",
+          color: isLongList ? "#0000cc" : "",
         }}
       >
-        긴 네모로 보기
+        <i className='fa-solid fa-align-center'></i>
       </button>
       <button
         onClick={() => dispatch({ type: "CHANGE_B" })}
         style={{
           backgroundColor: isLongList ? "" : "#8dafff",
+          color: isLongList ? "" : "#0000cc",
         }}
       >
-        통통한 네모로 보기
+        <i className='fa-solid fa-square'></i>
       </button>
     </div>
   );
@@ -33,9 +35,8 @@ const buttonContainer = css`
   text-align: end;
   button {
     margin-right: 20px;
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 15px;
+    padding: 4px 12px;
+    font-size: 18px;
     border: none;
     border-radius: 20px;
     cursor: pointer;

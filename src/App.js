@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import "@fortawesome/fontawesome-free/js/all.js";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./components/Router";
 // import Menu from "./components/Menu";
