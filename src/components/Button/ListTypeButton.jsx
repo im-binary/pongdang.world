@@ -12,7 +12,7 @@ export default function ListTypeButton() {
         onClick={() => dispatch({ type: "CHANGE_A" })}
         style={{
           backgroundColor: isLongList ? "#8dafff" : "",
-          color: isLongList ? "#0000cc" : "",
+          color: isLongList ? "#4141f5" : "",
         }}
       >
         <i className='fa-solid fa-align-center'></i>
@@ -21,7 +21,7 @@ export default function ListTypeButton() {
         onClick={() => dispatch({ type: "CHANGE_B" })}
         style={{
           backgroundColor: isLongList ? "" : "#8dafff",
-          color: isLongList ? "" : "#0000cc",
+          color: isLongList ? "" : "#4141f5",
         }}
       >
         <i className='fa-solid fa-square'></i>

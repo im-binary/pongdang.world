@@ -2,12 +2,12 @@ import { css } from "@emotion/react";
 
 export const mainTitleColor = css`
   // blue
-  color: #0000cc;
+  color: #4141f5;
 `;
 
 export const mainMenuBackground = css`
   // blue
-  background-color: #1908a8;
+  background-color: #4141f5;
   color: white;
 `;
 
