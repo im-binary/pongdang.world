@@ -40,8 +40,9 @@ const buttonContainer = css`
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    &:active {
-      transform: scale(0.95);
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 `;
