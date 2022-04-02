@@ -28,7 +28,6 @@ const container = ({ blur }) => css`
   left: 50%;
   transform: translate(-50%);
   width: 100%;
-  /* background-color: ${blur ? `"rgb(200 200 200 / 31%)";` : "rgb(255 255 255 / 100%);"}; */
   backdrop-filter: ${blur ? `blur(10px)` : "unset"};
   transition: background-color 300ms;
   padding: 0 20px;
