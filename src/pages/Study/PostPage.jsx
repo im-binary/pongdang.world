@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useCategory } from "../../hooks/category";
 import { css } from "@emotion/react";
 import { getPost } from "../../remotes/post";
+import FloatingButton from "../../components/Button/FloatingButton";
 
 const mdStyle = css`
   h1 {
@@ -83,6 +84,7 @@ export default function PostPage() {
       <div css={pcWrapper}>
         {/* <h1 css={pcPostTitle}>{id}</h1> */}
         <div css={mdStyle} dangerouslySetInnerHTML={{ __html: contents }}></div>
+        <FloatingButton />
       </div>
       <div css={mobileWrapper}>
         {/* <h1 css={mobilePostTitle}>{id}</h1> */}
