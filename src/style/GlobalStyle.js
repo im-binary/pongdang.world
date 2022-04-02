@@ -39,4 +39,8 @@ export const GlobalStyle = createGlobalStyle`
     .buger-menu-container span {
         background-color:${({ theme }) => theme.mainTextColor}
     }
+
+    button {
+        cursor: pointer;
+    }
 `;
