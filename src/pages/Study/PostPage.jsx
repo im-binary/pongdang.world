@@ -29,14 +29,14 @@ const mdStyle = css`
     display: inline-block;
     padding: 0px 12px;
     margin: 2px 0;
-    background-color: #cdcdcd;
+    background-color: #9b9b9b;
     color: black;
     border-radius: 20px;
   }
 
   pre {
     padding: 20px 30px;
-    background-color: #cdcdcd;
+    background-color: #9b9b9b;
     color: black;
     border-radius: 20px;
     margin: 10px 0;
