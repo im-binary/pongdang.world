@@ -37,14 +37,10 @@ export default function HelloPage() {
         <h3>Blogs</h3>
         <ul>
           <li>
-            <a className='blog-link' href='https://blog.pongdang.today'>
-              👉 blog.pongdang.today
-            </a>
+            <a href='https://blog.pongdang.today'>👉 blog.pongdang.today</a>
           </li>
           <li>
-            <a className='blog-link' href='https://velog.io/@pongdang'>
-              👉 velog.io/@pongdang
-            </a>
+            <a href='https://velog.io/@pongdang'>👉 velog.io/@pongdang</a>
           </li>
         </ul>
       </section>
@@ -63,6 +59,7 @@ const contentContainer = css`
   text-align: start;
   margin: 20px;
   line-height: 2;
+  min-height: 100vh;
 
   ul {
     list-style-type: georgian;

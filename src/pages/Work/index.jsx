@@ -49,6 +49,7 @@ export default function WorkPage(state) {
 }
 
 const wrapperA = css`
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   ${contentContainer};
@@ -63,6 +64,7 @@ const wrapperA = css`
 `;
 
 const wrapperB = css`
+  min-height: 100vh;
   margin-top: 20px;
   ${contentContainer};
   word-break: keep-all;

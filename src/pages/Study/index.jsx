@@ -21,12 +21,15 @@ export default function StudyPage() {
 // pc 버전
 
 const pcWrapper = css`
+  min-height: 100vh;
   @media (max-width: 699px) {
     display: none;
   }
 `;
 
 const mobileWrapper = css`
+  min-height: 100vh;
+
   @media (min-width: 700px) {
     display: none;
   }
