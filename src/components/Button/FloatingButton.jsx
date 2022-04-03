@@ -20,7 +20,6 @@ export default function FloatingButton() {
   }, []);
 
   const handleTopClick = () => {
-    console.log("클릭");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
