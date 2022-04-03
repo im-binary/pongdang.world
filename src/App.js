@@ -11,6 +11,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./context/themeProvider";
 import { GlobalStyle } from "./style/GlobalStyle";
 import ThemeToggleContainer from "./components/ThemeToggle/ThemeToggleContainer";
+import Footer from "./components/Footer";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -59,6 +60,7 @@ function App() {
                 <Router />
               </Provider>
             </MainContainer>
+            <Footer />
           </ThemeProvider>
         </BrowserRouter>
       </ErrorBoundary>
