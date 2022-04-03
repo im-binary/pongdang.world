@@ -32,9 +32,6 @@ export const GlobalStyle = createGlobalStyle`
         background-color:${({ theme }) => theme.boxHoverColor};
     }
     
-    .blog-link {
-        color:${({ theme }) => theme.mainTextColor}
-    }
 
     .buger-menu-container span {
         background-color:${({ theme }) => theme.mainTextColor}
@@ -42,5 +39,10 @@ export const GlobalStyle = createGlobalStyle`
 
     button {
         cursor: pointer;
+    }
+
+    a {
+        color:${({ theme }) => theme.mainTextColor}
+
     }
 `;
