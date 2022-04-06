@@ -33,6 +33,7 @@ export default function Dropdown({ menu }) {
 const dropdownStyle = css`
   position: relative;
   display: inline-block;
+  margin-left: 30px;
 
   .dropdown-content {
     display: none;

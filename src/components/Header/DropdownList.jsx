@@ -16,12 +16,6 @@ export default function DropdownList({ menuList }) {
 
 const container = css`
   ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
     ${boldTitleFont}
   }
-
-  margin-left: auto;
 `;
