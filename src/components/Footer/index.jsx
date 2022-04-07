@@ -6,7 +6,7 @@ export default function Footer() {
     <footer css={footer}>
       <hr />
       <p>
-        Copyright © 2020
+        Copyright © 2022
         <span>
           <a href='https://github.com/pongdang'> pongdang. </a>
         </span>
