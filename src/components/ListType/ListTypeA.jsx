@@ -31,6 +31,6 @@ const wrapper = css`
     font-weight: bold;
     margin: 20px 0;
     display: block;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 `;
