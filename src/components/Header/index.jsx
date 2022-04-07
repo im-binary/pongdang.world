@@ -31,6 +31,9 @@ const container = ({ blur }) => css`
   transition: background-color 300ms;
 
   @media (max-width: 569px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 90px;
   }
 
@@ -45,5 +48,10 @@ const navContainer = css`
   max-width: 1200px;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px;
+
+  @media (max-width: 569px) {
+    margin: 0;
+    width: 100%;
+  }
 `;
