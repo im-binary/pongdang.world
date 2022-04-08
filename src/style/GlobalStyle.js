@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         color:${({ theme }) => theme.mainTextColor}
     }
     
+    .content-container section h3::after {
+        background-color:${({ theme }) => theme.mainTextColor};
+    }
+
     .list-type-button button {
         background-color:${({ theme }) => theme.boxBgColor};
         color:${({ theme }) => theme.mainTextColor}
@@ -31,7 +35,6 @@ export const GlobalStyle = createGlobalStyle`
     .work-list li:hover {
         background-color:${({ theme }) => theme.boxHoverColor};
     }
-    
 
     .buger-menu-container span {
         background-color:${({ theme }) => theme.mainTextColor}
