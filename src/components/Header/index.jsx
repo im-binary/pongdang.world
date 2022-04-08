@@ -29,6 +29,7 @@ const container = ({ blur }) => css`
   width: 100%;
   backdrop-filter: ${blur ? `blur(10px)` : "unset"};
   transition: background-color 300ms;
+  z-index: 999;
 
   @media (max-width: 569px) {
     display: flex;
