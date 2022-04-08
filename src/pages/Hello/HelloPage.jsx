@@ -3,11 +3,10 @@ import { css } from "@emotion/react";
 
 export default function HelloPage() {
   return (
-    <div css={contentContainer}>
+    <div css={contentContainer} className='content-container'>
       <h1>안녕하세요 👋 퐁당의 블로그 입니당 👻</h1>
       <section>
         <h3>🤔 이런 고민을 하는 개발자가 되고 싶어요</h3>
-
         <ul>
           <li>좋은 사용자 경험은 무엇일까?</li>
           <li>읽기 좋은 코드란 무엇일까?</li>
@@ -56,27 +55,44 @@ export default function HelloPage() {
 }
 
 const contentContainer = css`
-  text-align: start;
+  text-align: center;
   margin: 20px;
   line-height: 2;
   min-height: 100vh;
-
+  word-break: keep-all;
   ul {
-    list-style-type: georgian;
+    text-align: start;
     padding-left: 12px;
+    max-width: 400px;
+    margin: 10px auto;
   }
 
   li {
-    list-style: inside;
+    list-style: disc;
   }
 
   h3 {
     margin-bottom: 12px;
-    display: flex;
+    display: inline-block;
+    position: relative;
+
+    @media (min-width: 347px) {
+      ::after {
+        content: "";
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 10px;
+        width: 100%;
+        background-color: black;
+        opacity: 0.3;
+      }
+    }
   }
 
   section {
-    margin: 12px 0;
+    margin: 34px 0;
   }
 
   a {
