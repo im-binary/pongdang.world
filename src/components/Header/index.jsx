@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <div css={container({ blur: top !== 0 })}>
       <nav css={navContainer}>
-        <Logo text='P O N G D A N G' />
+        <Logo text='PONGDANG' />
         <DropdownList menuList={menuList} />
         <HambugerMenu />
       </nav>

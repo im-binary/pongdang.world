@@ -16,18 +16,27 @@ const titleStyle = css`
     padding: 20px 0;
     font-size: 50px;
     text-align: start;
-    /* border: 1px solid olive; */
+    border: 1px solid olive;
+    letter-spacing: 16px;
     ${mainTitleColor}
     ${boldTitleFont}
   }
 
   @media (max-width: 569px) {
+    letter-spacing: 10px;
     font-size: 35px;
     ${mainTitleColor}
     ${boldTitleFont}
   }
 
   @media (max-width: 449px) {
+    font-size: 25px;
+    ${mainTitleColor}
+    ${boldTitleFont}
+  }
+
+  @media (max-width: 320px) {
+    letter-spacing: unset;
     font-size: 25px;
     ${mainTitleColor}
     ${boldTitleFont}
