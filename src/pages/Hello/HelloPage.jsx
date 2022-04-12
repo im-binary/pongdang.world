@@ -4,7 +4,9 @@ import { css } from "@emotion/react";
 export default function HelloPage() {
   return (
     <div css={contentContainer} className='content-container'>
-      <h1>안녕하세요 👋 퐁당의 블로그 입니당 👻</h1>
+      <h1>
+        안녕하세요 👋 <br /> 퐁당의 블로그 입니당 👻
+      </h1>
       <section>
         <h3>🤔 이런 고민을 하는 개발자가 되고 싶어요</h3>
         <ul>
