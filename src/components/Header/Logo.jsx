@@ -16,7 +16,6 @@ const titleStyle = css`
     padding: 20px 0;
     font-size: 50px;
     text-align: start;
-    border: 1px solid olive;
     letter-spacing: 16px;
     ${mainTitleColor}
     ${boldTitleFont}
