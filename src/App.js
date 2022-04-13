@@ -15,6 +15,7 @@ import Footer from "./components/Footer";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   function reducer(currentState, action) {
@@ -49,6 +50,7 @@ function App() {
     <div className='App'>
       <ErrorBoundary>
         <BrowserRouter>
+          <ScrollToTop />
           <ThemeProvider>
             <GlobalStyle />
             {/* <Title />
