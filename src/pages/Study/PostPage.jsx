@@ -8,9 +8,10 @@ import FloatingButton from "../../components/Button/FloatingButton";
 const mdStyle = css`
   h1 {
     background-color: #a0a0a05f;
-    border-radius: 20px;
+    border-radius: 10px;
     padding-bottom: 10px;
     padding: 10px 0;
+    font-size: 26px;
   }
 
   h1,
