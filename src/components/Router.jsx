@@ -13,11 +13,15 @@ import WorkPage from "../pages/Work/index";
 
 // Test 페이지
 import TestPage from "../pages/Test/index";
+import Hi from "../pages/Test/Hi";
+import ScrollText from "../pages/Test/ScrollText";
+import HelloPageV2 from "../pages/Hello/HelloPageV2";
 
 export default function Router() {
   return (
     <Routes>
       <Route exact path='/' element={<HelloPage />} />
+      <Route path='/hello-v2' element={<HelloPageV2 />} />
       <Route path='/study' element={<StudyPage />}>
         <Route index element={<Navigate replace to='/study/frontend' />} />
         {/* 리스트 페이지 */}
@@ -29,6 +33,8 @@ export default function Router() {
       </Route>
       <Route path='/work' element={<WorkPage />} />
       <Route path='/test' element={<TestPage />} />
+      <Route path='/test/hi' element={<Hi />} />
+      <Route path='/test/scrolltext' element={<ScrollText />} />
     </Routes>
   );
 }

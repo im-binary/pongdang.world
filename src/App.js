@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useRef } from "react";
 import "@fortawesome/fontawesome-free/js/all.js";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./components/Router";
@@ -18,10 +18,13 @@ import { createStore } from "redux";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  const ref = useRef();
+
   function reducer(currentState, action) {
     if (currentState === undefined) {
       return {
         listType: localStorage.getItem("listType") || "A",
+        appRef: ref,
       };
     }
 
@@ -47,7 +50,7 @@ function App() {
   const store = createStore(reducer);
 
   return (
-    <div className='App'>
+    <div className='App' ref={ref}>
       <ErrorBoundary>
         <BrowserRouter>
           <ScrollToTop />
