@@ -55,12 +55,15 @@ const wrapperA = css`
   flex-direction: column;
   ${contentContainer};
   li {
-    border-radius: 16px;
     font-size: 20px;
     font-weight: bold;
     margin: 20px 0;
-    display: block;
+    border-radius: 16px;
+  }
+  a {
     padding: 20px 0;
+    display: inline-block;
+    width: 100%;
   }
 `;
 
