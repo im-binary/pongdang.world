@@ -19,6 +19,7 @@ export default function WorkPage(state) {
     { name: "자바스크립트 방향키 이벤트", url: "https://blog.pongdang.today/pongwork/08/15" },
     { name: "자바스크립트 방향키와 버튼 이벤트", url: "https://blog.pongdang.today/cc/html/cc07" },
     { name: "자바스크립트의 Math, String, Date 객체 활용", url: "https://blog.pongdang.today/pongwork/21/12/25" },
+    { name: "토끼 계산기", url: "https://blog.pongdang.today/pongwork/22/05/11" },
   ];
   return (
     <>
