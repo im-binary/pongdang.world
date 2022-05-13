@@ -16,6 +16,7 @@ import TestPage from "../pages/Test/index";
 import Hi from "../pages/Test/Hi";
 import ScrollText from "../pages/Test/ScrollText";
 import HelloPageV2 from "../pages/Hello/HelloPageV2";
+import NotFound from "../pages/Notfound";
 
 export default function Router() {
   return (
@@ -35,6 +36,7 @@ export default function Router() {
       <Route path='/test' element={<TestPage />} />
       <Route path='/test/hi' element={<Hi />} />
       <Route path='/test/scrolltext' element={<ScrollText />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }
