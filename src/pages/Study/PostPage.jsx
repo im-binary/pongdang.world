@@ -7,8 +7,8 @@ import FloatingButton from "../../components/Button/FloatingButton";
 
 const mdStyle = css`
   h1 {
-    background-color: #a0a0a05f;
-    border-radius: 10px;
+    /* background-color: #a0a0a05f; */
+    /* border-radius: 10px; */
     padding-bottom: 10px;
     padding: 10px 0;
     font-size: 26px;
@@ -22,6 +22,9 @@ const mdStyle = css`
   }
 
   p {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px 20px;
     line-height: 1.8;
     margin: 10px 0;
   }
