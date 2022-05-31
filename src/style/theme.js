@@ -50,6 +50,7 @@ export const lightTheme = {
   boxBgColor: "#efefef",
   boxHoverColor: "#e0e0e0",
   btnBorder: "1px solid #eaeaea",
+  codeBgColor: "#e6e6e6",
 };
 
 export const darkTheme = {
@@ -58,6 +59,7 @@ export const darkTheme = {
   boxBgColor: "#434343",
   boxHoverColor: "#565656",
   btnBorder: "1px solid #2c2d33",
+  codeBgColor: "#0c0c0c",
 };
 
 export const theme = {

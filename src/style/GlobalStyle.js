@@ -46,6 +46,10 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
         color:${({ theme }) => theme.mainTextColor}
-
+    } 
+    
+    pre{
+        background-color:${({ theme }) => theme.codeBgColor}
     }
+
 `;
