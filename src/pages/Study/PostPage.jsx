@@ -6,54 +6,70 @@ import { getPost } from "../../remotes/post";
 import FloatingButton from "../../components/Button/FloatingButton";
 
 const mdStyle = css`
+  border: 2px solid #d8d8d8;
+  border-radius: 10px;
+  padding: 100px 20px 10px;
+  line-height: 1.7;
+  position: relative;
+
   h1 {
-    /* background-color: #a0a0a05f; */
-    /* border-radius: 10px; */
-    padding-bottom: 10px;
-    padding: 10px 0;
-    font-size: 26px;
+    animation: slideUp 0.75s 0.5s cubic-bezier(0.17, 0.88, 0.32, 1.27) both, fadeIn 0.25s 0.5s ease-in both;
+    position: absolute;
+    text-align: start;
+    /* text-shadow: 3px 3px 7px; */
+    top: 0;
+    left: 20px;
+    width: 100%;
   }
 
-  h1,
+  h1:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100px;
+    border-bottom: 3px solid #4141f5;
+    margin: 20px auto;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(20px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   h2,
-  h3,
-  h4 {
-    margin: 20px 0;
-  }
-
-  p {
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 10px 20px;
-    line-height: 1.8;
+  h3:empty {
+    position: relative;
     margin: 10px 0;
   }
 
-  code {
-    display: inline-block;
-    padding: 0px 12px;
-    margin: 2px 0;
-    background-color: #9b9b9b;
-    color: black;
-    border-radius: 20px;
-  }
-
-  pre {
-    padding: 20px 30px;
-    background-color: #9b9b9b;
-    color: black;
-    border-radius: 20px;
-    margin: 10px 0;
-    overflow: scroll;
-  }
-
-  pre code {
-    padding: unset;
-    margin: unset;
+  h3 code {
+    display: unset;
+    border-bottom: none;
   }
 
   img {
     width: 100%;
+  }
+
+  ol ul {
+    margin-left: 20px;
+  }
+
+  ul ol {
+    margin-left: 20px;
   }
 
   ul {
@@ -65,12 +81,37 @@ const mdStyle = css`
   }
 
   li {
-    margin-left: 20px;
+    list-style-position: inside;
   }
 
-  a {
-    color: red;
-    font-weight: bold;
+  li p {
+    display: inline-block;
+  }
+
+  code {
+    color: black;
+    background-color: #e6e6e6;
+    box-shadow: 2px 2px 2px #7e7e7ea1;
+    border-radius: 4px;
+    padding: 2px 6px;
+  }
+
+  p code {
+    font-size: 12px;
+  }
+
+  pre {
+    overflow: scroll;
+    border-radius: 6px;
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+
+  pre code {
+    border: none;
+    background-color: unset;
+    box-shadow: unset;
+    color: unset;
   }
 `;
 
@@ -87,7 +128,7 @@ export default function PostPage() {
     <>
       <div css={pcWrapper}>
         {/* <h1 css={pcPostTitle}>{id}</h1> */}
-        <div css={mdStyle} dangerouslySetInnerHTML={{ __html: contents }}></div>
+        <div className='md-container' css={mdStyle} dangerouslySetInnerHTML={{ __html: contents }}></div>
         <FloatingButton />
       </div>
       <div css={mobileWrapper}>
