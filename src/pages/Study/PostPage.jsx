@@ -147,7 +147,7 @@ const pcWrapper = css`
   padding: 10px 30px;
   text-align: start;
   h1 {
-    text-align: center;
+    text-align: start;
   }
 `;
 
@@ -159,6 +159,6 @@ const mobileWrapper = css`
   text-align: start;
   padding: 16px 20px;
   h1 {
-    text-align: center;
+    text-align: start;
   }
 `;
