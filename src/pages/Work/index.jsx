@@ -53,7 +53,9 @@ const wrapperA = css`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
   ${contentContainer};
+
   li {
     font-size: 20px;
     font-weight: bold;
@@ -72,6 +74,7 @@ const wrapperB = css`
   margin-top: 20px;
   ${contentContainer};
   word-break: keep-all;
+  text-align: center;
 
   ul {
     display: grid;

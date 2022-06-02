@@ -24,6 +24,7 @@ const wrapper = css`
   display: flex;
   flex-direction: column;
   ${contentContainer};
+  text-align: center;
 
   a {
     border-radius: 16px;

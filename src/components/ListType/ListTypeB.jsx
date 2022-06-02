@@ -24,6 +24,7 @@ const wrapper = css`
   margin-top: 20px;
   ${contentContainer};
   word-break: keep-all;
+  text-align: center;
 
   ul {
     display: grid;

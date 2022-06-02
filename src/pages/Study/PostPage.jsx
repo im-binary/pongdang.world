@@ -16,7 +16,6 @@ const mdStyle = css`
     animation: slideUp 0.75s 0.5s cubic-bezier(0.17, 0.88, 0.32, 1.27) both, fadeIn 0.25s 0.5s ease-in both;
     position: absolute;
     text-align: start;
-    /* text-shadow: 3px 3px 7px; */
     top: 0;
     left: 20px;
     width: 100%;
@@ -145,10 +144,6 @@ const pcWrapper = css`
   }
   width: 100%;
   padding: 10px 30px;
-  text-align: start;
-  h1 {
-    text-align: start;
-  }
 `;
 
 const mobileWrapper = css`
@@ -156,9 +151,5 @@ const mobileWrapper = css`
     display: none;
   }
   width: 100%;
-  text-align: start;
   padding: 16px 20px;
-  h1 {
-    text-align: start;
-  }
 `;
