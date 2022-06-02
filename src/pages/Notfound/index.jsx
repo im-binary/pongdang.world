@@ -22,6 +22,7 @@ const wrapper = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   h2 {
     color: #8dafff;
     font-size: 25px;

@@ -16,6 +16,7 @@ export default function DropdownList({ menuList }) {
 
 const container = css`
   ul {
+    text-align: center;
     ${boldTitleFont}
   }
 `;
