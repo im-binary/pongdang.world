@@ -9,7 +9,7 @@ export default function HelloPage() {
       </h1>
 
       <section>
-        <h3>🤔 저는 이런 고민을 합니당</h3>
+        <h2>🤔 저는 이런 고민을 합니당</h2>
         <ul>
           <li>좋은 사용자 경험은 무엇일까?</li>
           <li>읽기 좋은 코드란 무엇일까?</li>
@@ -18,7 +18,7 @@ export default function HelloPage() {
       </section>
 
       <section>
-        <h3>🧑‍💻 아래 기술들을 찍먹해보았어요</h3>
+        <h2>🧑‍💻 아래 기술들을 찍먹해보았어요</h2>
         <ul>
           <li>HTML, CSS, JavaScript</li>
           <li>React, React Redux, Emotion</li>
@@ -28,7 +28,7 @@ export default function HelloPage() {
       </section>
 
       <section>
-        <h3>😍 저는 이런 걸 좋아해요</h3>
+        <h2>😍 저는 이런 걸 좋아해요</h2>
         <ul>
           <li>😻 고양이를 좋아합니다.</li>
           <li>📚 책 읽는 걸 좋아합니다.</li>
@@ -37,7 +37,7 @@ export default function HelloPage() {
       </section>
 
       <section>
-        <h3>Blogs</h3>
+        <h2>Blogs</h2>
         <ul>
           <li>
             <a href='https://blog.pongdang.today'>👉 blog.pongdang.today</a>
@@ -49,7 +49,7 @@ export default function HelloPage() {
       </section>
 
       <section>
-        <h3>Contacts</h3>
+        <h2>Contacts</h2>
         <ul>
           <li>👉 pongpong0121@kakao.com</li>
         </ul>
@@ -107,6 +107,12 @@ const contentContainer = css`
     border-bottom: 4px solid;
     display: inline;
 
+    @media (max-width: 536px) {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
     @media (max-width: 536px) {
       font-size: 20px;
     }
