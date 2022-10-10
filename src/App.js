@@ -52,7 +52,7 @@ function App() {
   return (
     <div className='App' ref={ref}>
       <ErrorBoundary>
-        <BrowserRouter>
+        <BrowserRouter basename='/blog'>
           <ScrollToTop />
           <ThemeProvider>
             <GlobalStyle />

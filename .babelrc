@@ -1,18 +1,24 @@
+// .babelrc
 {
-    "plugins": [
-      [
-        "@emotion/babel-plugin-jsx-pragmatic",
-        {
-          "export": "jsx",
-          "import": "__to_avoid_prepending_/** @jsxImportSource @emotion/react */",
-          "module": "@emotion/react"
-        }
-      ],
-      [
-        "@babel/plugin-transform-react-jsx",
-        {
-          "pragma": "__to_avoid_prepending_/** @jsxImportSource @emotion/react */"
-        }
-      ]
+  "plugins": [
+    "@emotion/babel-plugin",
+    [
+      "@emotion/babel-plugin-jsx-pragmatic",
+      {
+        "export": "jsx",
+        "import": "__to_avoid_prepending_/** @jsxImportSource @emotion/react */",
+        "module": "@emotion/react"
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "__to_avoid_prepending_/** @jsxImportSource @emotion/react */"
+      }
     ]
-  }
+  ],
+  "presets": [
+    ["@babel/preset-react", { "runtime": "automatic", "importSource": "@emotion/react" }],
+    ["@emotion/babel-preset-css-prop"]
+  ]
+}
