@@ -8,21 +8,21 @@ export default function WorkPage(state) {
   const isLongList = useSelector(({ listType }) => listType === "A");
 
   const workList = [
-    { name: "우리집 고양이", url: "https://blog.pongdang.today/vanilla-blog/pongwork/07/20" },
-    { name: "토끼", url: "https://blog.pongdang.today/vanilla-blog/pongwork/07/22" },
-    { name: "토끼를 넣은 Profile", url: "https://blog.pongdang.today/vanilla-blog/pongwork/07/24" },
-    { name: "inline-block 사용해보기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/07/29" },
-    { name: "float 사용해보기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/07/31" },
-    { name: "flex 사용해보기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/08/05" },
-    { name: "position 사용해보기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/08/08" },
-    { name: "자바스크립트 Math.random() 사용해보기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/08/12" },
-    { name: "자바스크립트 방향키 이벤트", url: "https://blog.pongdang.today/vanilla-blog/pongwork/08/15" },
-    { name: "자바스크립트 방향키와 버튼 이벤트", url: "https://blog.pongdang.today/vanilla-blog/cc/html/cc07" },
+    { name: "우리집 고양이", url: "/vanilla-blog/pongwork/07/20.html" },
+    { name: "토끼", url: "/vanilla-blog/pongwork/07/22.html" },
+    { name: "토끼를 넣은 Profile", url: "/vanilla-blog/pongwork/07/24.html" },
+    { name: "inline-block 사용해보기", url: "/vanilla-blog/pongwork/07/29.html" },
+    { name: "float 사용해보기", url: "/vanilla-blog/pongwork/07/31.html" },
+    { name: "flex 사용해보기", url: "/vanilla-blog/pongwork/08/05.html" },
+    { name: "position 사용해보기", url: "/vanilla-blog/pongwork/08/08.html" },
+    { name: "자바스크립트 Math.random() 사용해보기", url: "/vanilla-blog/pongwork/08/12.html" },
+    { name: "자바스크립트 방향키 이벤트", url: "/vanilla-blog/pongwork/08/15.html" },
+    { name: "자바스크립트 방향키와 버튼 이벤트", url: "/vanilla-blog/cc/html/cc07.html" },
     {
       name: "자바스크립트의 Math, String, Date 객체 활용",
-      url: "https://blog.pongdang.today/vanilla-blog/pongwork/21/12/25",
+      url: "/vanilla-blog/pongwork/21/12/25.html",
     },
-    { name: "토끼 계산기", url: "https://blog.pongdang.today/vanilla-blog/pongwork/22/05/11" },
+    { name: "토끼 계산기", url: "/vanilla-blog/pongwork/22/05/11.html" },
   ];
   return (
     <>
