@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { contentContainer } from "../../style/theme";
 import ListTypeButton from "../../components/Button/ListTypeButton";
 
-const DOMAIN = `https://pongdang-today.vercel.app`;
+const DOMAIN = `https://www.pongdang.today`;
 const BASE_PATH = `vanilla-blog`;
 const URL = `${DOMAIN}/${BASE_PATH}`;
 
