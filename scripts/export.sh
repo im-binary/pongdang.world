@@ -18,4 +18,8 @@ date
 # [2초] HTML 내용에 헤더랑 리다이렉트 추가하는 로직
 find ./public/static-post -name "*.html" | sort | grep -v "index.html" | xargs -I {FILE} ./scripts/export.js {FILE}
 
+# blog 하위 디렉토리도 동작할 수 있도록 수정
+mkdir ./public/blog
+cp -R ./public/static-post ./public/blog/static-post
+
 echo "> done"
